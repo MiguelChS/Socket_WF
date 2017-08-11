@@ -12,7 +12,6 @@ ioServer.on('connection', function(socket) {
     socket.on('setUserId', function(uId) {
         console.log("aca")
         customsID[uId] = socket.id
-
     });
 
     //DISCONNET SOCKET
