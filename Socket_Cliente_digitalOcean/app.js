@@ -15,6 +15,7 @@ app.use('/apiwf2/getwosbycsr', require('./routes/getwosbycsr'));
 app.use('/apiwf2/login', require('./routes/login'));
 app.use('/apiwf2/sendform', require('./routes/sendform'));
 app.use('/apiwf2/cliente', require('./routes/cliente'));
+app.use('/apiwf2/forms', require('./routes/Forms'))
 
 app.listen(3030, function() {
     console.log('Express server listening on port 3030');

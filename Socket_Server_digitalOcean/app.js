@@ -56,5 +56,19 @@ ioServer.on('connection', function(socket) {
     socket.on('retornoClienteGet', function(data) {
         ioServer.to(customsID[data.userid]).emit('retornoClienteGet', data);
     });
+    //Obtener Formularios
+    socket.on("getForms", function(data) {
+        ioServer.to(customsID['server']).emit('getForms', data);
+    });
+    socket.on('retornogetForms', function(data) {
+        ioServer.to(customsID[data.userid]).emit('retornogetForms', data);
+    });
+    //senviar formulario
+    socket.on("sendForms", function(data) {
+        ioServer.to(customsID['server']).emit('sendForms', data);
+    });
+    socket.on('retornosendForms', function(data) {
+        ioServer.to(customsID[data.userid]).emit('retornosendForms', data);
+    });
 
 });

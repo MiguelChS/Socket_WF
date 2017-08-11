@@ -2,10 +2,32 @@ var
     request = require('request'),
     io = require('socket.io-client');
 
+let axios = require("axios");
+
 ioClient = io.connect('http://ncrapps.com:8080');
 
 ioClient.on('connect', function() {
     ioClient.emit('setUserId', 'server');
+});
+
+ioClient.on('getForms', function(data) {
+    axios.get(`http://lnxsrv02:3434/Forms/${data.pais}`)
+        .then((result) => {
+            ioClient.emit('retornogetForms', { userid: data.userid, detail: result });
+        })
+        .catch((err) => {
+            ioClient.emit('retornogetForms', { userid: data.userid, detail: 'Error' });
+        })
+});
+
+ioClient.on('sendForms', function(data) {
+    axios.post(`http://lnxsrv02:3434/Forms`, data.form)
+        .then((result) => {
+            ioClient.emit('retornosendForms', { userid: data.userid, detail: true });
+        })
+        .catch((err) => {
+            ioClient.emit('retornosendForms', { userid: data.userid, detail: false });
+        })
 });
 
 ioClient.on('ClienteGet', function(data) {
