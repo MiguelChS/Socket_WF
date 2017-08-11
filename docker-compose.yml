@@ -7,7 +7,7 @@ api_cliente:
       - mongodb
 
 socket_ncr:
-  build: ./Socket_Cliente_ncr
+  build: ./socket_ncr
   command: npm start
 
 api_formularios:
@@ -27,4 +27,3 @@ mongodb:
   ports:
     - 27017:27017
   command: mongod --smallfiles --logpath=/dev/null # --quiet
-  
