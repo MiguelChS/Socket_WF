@@ -1,0 +1,32 @@
+const sql = require("mssql");
+const config = {
+    user: 'ta_forms',
+    password: 'teamanalysis',
+    server: 'SARBUE8001',
+    database: 'Forms',
+}
+
+
+module.exports = {
+    getCliente: () => {
+        return new Promise((resolve, reject) => {
+            sql.connect(config).then(pool => {
+                    return pool.request()
+                        .query('select Nombres from Clientes')
+                })
+                .then((result) => {
+                    sql.close();
+                    resolve(result.recordset);
+                })
+                .catch(err => {
+                    sql.close();
+                    reject(err)
+                })
+
+            sql.on('error', err => {
+                sql.close();
+                reject(err)
+            })
+        })
+    }
+}
