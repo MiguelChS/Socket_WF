@@ -1,0 +1,19 @@
+{
+  "name": "socket_wf_client_api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "*",
+    "socket.io": "*",
+    "socket.io-client": "*"
+  },
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
