@@ -11,26 +11,25 @@ ioClient.on('connect', function() {
 });
 
 ioClient.on('getForms', function(data) {
-    axios.get(`http://lnxsrv02:3434/Forms/${data.pais}`)
-        .then((result) => {
-            ioClient.emit('retornogetForms', { userid: data.userid, detail: result });
-        })
-        .catch((err) => {
-            console.log(data);
-            console.log('--------------------------- Errooo -----------------------------------')
-            console.log(err);
-            ioClient.emit('retornogetForms', { userid: data.userid, detail: 'Error' });
-        })
+    request(`http://lnxsrv02:3434/Forms/${data.pais}`, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            ioClient.emit('retornogetForms', { userid: data.userid, detail: JSON.parse(body) });
+        } else {
+            console.log('error');
+            ioClient.emit('retornogetForms', { userid: data.userid, detail: 'Error Get Cliente' });
+        }
+    });
 });
 
 ioClient.on('sendForms', function(data) {
-    axios.post(`http://lnxsrv02:3434/Forms`, data.form)
-        .then((result) => {
+    request.post({ url: 'http://lnxsrv02:3434/Forms', form: data.form }, function(err, httpResponse, body) {
+        if (!err && httpResponse.statusCode == 200) {
             ioClient.emit('retornosendForms', { userid: data.userid, detail: true });
-        })
-        .catch((err) => {
+        } else {
+            console.log('error');
             ioClient.emit('retornosendForms', { userid: data.userid, detail: false });
-        })
+        }
+    })
 });
 
 ioClient.on('ClienteGet', function(data) {
