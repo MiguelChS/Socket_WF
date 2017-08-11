@@ -1,0 +1,30 @@
+api_cliente:
+  build: ./api_wf
+  ports:
+    - "3015:3015"
+  command: npm start
+  links:
+      - mongodb
+
+socket_ncr:
+  build: ./Socket_Cliente_ncr
+  command: npm start
+
+api_formularios:
+  build: ./WF-Mails
+  ports:
+    - "3434:3434"
+  command: npm start
+
+mongodb:
+  image: mongo:latest
+  container_name: "mongodb"
+  environment:
+    - MONGO_DATA_DIR=/data/db
+    - MONGO_LOG_DIR=/dev/null
+  volumes:
+    - ./data/db:/data/db
+  ports:
+    - 27017:27017
+  command: mongod --smallfiles --logpath=/dev/null # --quiet
+  
