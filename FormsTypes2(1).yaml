@@ -1,0 +1,404 @@
+Logistic:
+  id: 2
+  name: Logistic
+  inputs:
+    WorkOrder:
+         id: 1,
+         name: WorkOrder
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+            - MaxLength10:
+                description: length
+                value: 10
+    
+    Parte:
+         id: 2,
+         name: Parte
+         type: InputNumber
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+            - MaxLength10:
+              description: length
+              value: 10
+    Retorno:
+         id: 4,
+         name: Retorno
+         type: InputText
+         value: ''
+    Ref_Reparador:
+         id: 3,
+         name: Ref Reparador
+         type: InputText
+         value: ''
+    Comentario:
+         id: 5,
+         name: Comentario
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Photos:
+         id: 6,
+         name: Photos
+         type: Photo
+         value: ''
+         properties:
+            - MaxLength4:
+                description: length
+                value: 4 
+Mantenimiento:
+  id: 3
+  name: Mantenimiento
+  inputs:
+    WorkOrder:
+         id: 1,
+         name: WorkOrder
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+            - MaxLength10:
+              description: length
+              value: 10
+    Serie:
+         id: 7,
+         name: Serie
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Equipo:
+         id: 7,
+         name: InputText
+         type: Equipo
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Cliente:
+         id: 8,
+         name: Cliente
+         type: Picker
+         value: ''
+         properties:
+           - Required:
+                description: required
+                value: true
+    Fecha:
+         id: 9,
+         name: Fecha
+         type: DatePicker
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Comentario:
+         id: 5,
+         name: Comentario
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Photos:
+         id: 6,
+         name: Photos
+         type: Photo
+         value: ''
+         properties:
+            - MaxLength4:
+                description: length
+                value: 4
+MemoriaFiscal:
+  id: 4
+  name: Memoria Fiscal
+  inputs:
+    WorkOrder:
+         id: 1,
+         name: WorkOrder
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+            - MaxLength10:
+                description: length
+                value: 10
+    Equipo:
+         id: 7,
+         name: InputText
+         type: Equipo
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Cliente:
+         id: 8,
+         name: Cliente
+         type: Picker
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    CustRef:
+         id: 11,
+         name: Cust Ref #
+         type: InputText
+         value: ''
+    SiteName:
+         id: 12,
+         name: Site Name
+         type: InputText
+         value: ''
+    NroPuntoVenta:
+         id: 13,
+         name: Nro Punto Venta
+         type: InputText
+         value: ''
+    VerFirmwarePlacaFiscal:
+         id: 14,
+         name:  Ver.Firmware placa fiscal
+         type: InputText
+         value: ''
+    SerieImpresora:
+         id: 15,
+         name:  Serie Impresora
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Photos:
+         id: 6,
+         name: Photos
+         type: Photo
+         value: ''
+         properties:
+            - MaxLength4:
+                description: length
+                value: 4
+CambioPinPad:
+  id: 5
+  name: Cambio Pin Pad
+  inputs:
+    WorkOrder:
+         id: 1,
+         name: WorkOrder
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+            - MaxLength10:
+                description: length
+                value: 10
+    CustRef:
+         id: 11,
+         name: Cust Ref #
+         type: InputText
+         value: ''
+    SiteName:
+         id: 12,
+         name: Site Name
+         type: InputText
+         value: ''
+    NroPos:
+         id: 16,
+         name: Nro Pos
+         type: InputNumber
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    SerieSaliente:
+         id: 17,
+         name:  Serie Saliente
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    SerieEntrante:
+         id: 18,
+         name:  Serie Entrante
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Photos:
+         id: 6,
+         name: Photos
+         type: Photo
+         value: ''
+         properties:
+            - MaxLength4:
+              description: length
+              value: 4
+VisitaTecnica:
+  id: 6
+  name: Visita Tecnica
+  inputs:
+    WorkOrder:
+         id: 1,
+         name: WorkOrder
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+            - MaxLength10:
+                description: length
+                value: 10
+    Cliente:
+         id: 8,
+         name: Cliente
+         type: Picker
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Serie:
+         id: 7,
+         name: Serie
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Equipo:
+         id: 7,
+         name: InputText
+         type: Equipo
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Fecha:
+         id: 9,
+         name: Fecha
+         type: DatePicker
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Photos:
+         id: 6,
+         name: Photos
+         type: Photo
+         value: ''
+         properties:
+            - MaxLength4:
+                description: length
+                value: 4
+TecladoEncryptor:
+  id: 7
+  name: Teclado Encryptor
+  inputs:
+    WorkOrder:
+         id: 1,
+         name: WorkOrder
+         type: InputText
+         value: ''
+         properties:
+           - Required:
+                description: required
+                value: true
+           - MaxLength10:
+              description: length
+              value: 10
+    Cliente:
+         id: 8,
+         name: Cliente
+         type: Picker
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Equipo:
+         id: 7,
+         name: InputText
+         type: Equipo
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    Serie:
+         id: 7,
+         name: Serie
+         type: InputText
+         value: ''
+         properties:
+            - Required:
+                description: required
+                value: true
+    MotivoDanio:
+         id: 19,
+         name:  Motivo
+         type: GroupComponent
+         value: ''
+         properties:
+            - property:
+                description: inputs
+                value:
+                - Temperatura:
+                    id: 20
+                    name: Temperatura
+                    type: CheckBox
+                    value: false
+                - Golpe:
+                    id: 21
+                    name: Golpe
+                    type: CheckBox
+                    value: false
+                - Electrico:
+                    id: 22
+                    name: Electrico
+                    type: CheckBox
+                    value: false
+                - Otro:
+                    id: 23
+                    name: Otro
+                    type: CheckBox
+                    value: false
+    Photos:
+         id: 6,
+         name: Photos
+         type: Photo
+         value: ''
+         properties:
+            - MaxLength4:
+              description: length
+              value: 4
+
