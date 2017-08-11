@@ -11,7 +11,7 @@ router.get("/:userid", (req, res) => {
         socket.emit('ClienteGet', datos);
     });
     socket.on('retornoClienteGet', (data) => {
-        res.json(data);
+        res.json(data.detail);
     });
 })
 
