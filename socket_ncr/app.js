@@ -16,6 +16,7 @@ ioClient.on('getForms', function(data) {
             ioClient.emit('retornogetForms', { userid: data.userid, detail: result });
         })
         .catch((err) => {
+            console.log(err);
             ioClient.emit('retornogetForms', { userid: data.userid, detail: 'Error' });
         })
 });
