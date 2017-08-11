@@ -11,7 +11,7 @@ router.get("/:pais/:userid", (req, res) => {
         socket.emit('getForms', datos);
     });
     socket.on('retornogetForms', (data) => {
-        res.json(data.detail);
+        res.status(200).json(data.detail);
     });
 })
 
@@ -24,7 +24,11 @@ router.post("/", (req, res) => {
         socket.emit('sendForms', datos);
     });
     socket.on('retornosendForms', (data) => {
-        res.json(data.detail);
+        if (data.detail == true) {
+            res.status(200).send();
+        } else {
+            res.status(500).send();
+        }
     });
 })
 
