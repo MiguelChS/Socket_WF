@@ -27,13 +27,12 @@ app.post("/Forms", (req, res) => {
 })
 
 app.get("/Forms/:pais", (req, res) => {
-    //buscar los formularios
     let formularios = [];
     let jsonData = JSON.parse(fs.readFileSync('./JsonFormularios.Json', 'utf8'));
     switch (req.params.pais) {
         case "AR":
             {
-                formularios = jsonData;
+                formularios = jsonData.filter(x => x.id == 1);
             }
         case "BR":
             {
