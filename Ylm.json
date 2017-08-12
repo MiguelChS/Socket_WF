@@ -1,0 +1,474 @@
+{
+    "CambioPinPad": {
+        "columnName": "",
+        "id": 5,
+        "name": "Cambio Pin Pad",
+        "inputs": [{
+                "name": "WorkOrder",
+                "type": "InputText",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "1,"
+            },
+            {
+                "type": "InputText",
+                "id": "11,",
+                "value": "",
+                "name": "Cust Ref"
+            },
+            {
+                "type": "InputText",
+                "id": "12,",
+                "value": "",
+                "name": "Site Name"
+            },
+            {
+                "name": "Nro Pos",
+                "type": "InputNumber",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "16,"
+            },
+            {
+                "name": "Serie Saliente",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "17,"
+            },
+            {
+                "name": "Serie Entrante",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "18,"
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [{
+                    "description": "length",
+                    "value": 4
+                }],
+                "value": "",
+                "id": "6,"
+            }
+        ]
+    },
+    "Logistic": {
+        "inputs": [{
+                "name": "WorkOrder",
+                "type": "InputText",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "1,"
+            },
+            {
+                "name": "Parte",
+                "type": "InputNumber",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "2,"
+            },
+            {
+                "type": "InputText",
+                "id": "4,",
+                "value": "",
+                "name": "Retorno"
+            },
+            {
+                "type": "InputText",
+                "id": "3,",
+                "value": "",
+                "name": "Ref Reparador"
+            },
+            {
+                "name": "Comentario",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "5,"
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [{
+                    "description": "length",
+                    "value": 4
+                }],
+                "value": "",
+                "id": "6,"
+            }
+        ],
+        "id": 2,
+        "name": "Logistic"
+    },
+    "MemoriaFiscal": {
+        "columnName": "",
+        "id": 4,
+        "name": "Memoria Fiscal",
+        "inputs": [{
+                "name": "WorkOrder",
+                "type": "InputText",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "1,"
+            },
+            {
+                "name": "Equipo",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "Cliente",
+                "type": "Picker",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "8,"
+            },
+            {
+                "type": "InputText",
+                "id": "11,",
+                "value": "",
+                "name": "Cust Ref"
+            },
+            {
+                "type": "InputText",
+                "id": "12,",
+                "value": "",
+                "name": "Site Name"
+            },
+            {
+                "type": "InputText",
+                "id": "13,",
+                "value": "",
+                "name": "Nro Punto Venta"
+            },
+            {
+                "type": "InputText",
+                "id": "14,",
+                "value": "",
+                "name": "Ver.Firmware placa fiscal"
+            },
+            {
+                "name": "Serie Impresora",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "15,"
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [{
+                    "description": "length",
+                    "value": 4
+                }],
+                "value": "",
+                "id": "6,"
+            }
+        ]
+    },
+    "Mantenimiento": {
+        "columnName": "",
+        "id": 3,
+        "name": "Mantenimiento",
+        "inputs": [{
+                "name": "WorkOrder",
+                "type": "InputText",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "1,"
+            },
+            {
+                "name": "Serie",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "InputText",
+                "type": "Equipo",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "Cliente",
+                "type": "Picker",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "8,"
+            },
+            {
+                "name": "Fecha",
+                "type": "DatePicker",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "9,"
+            },
+            {
+                "name": "Comentario",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "5,"
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [{
+                    "description": "length",
+                    "value": 4
+                }],
+                "value": "",
+                "id": "6,"
+            }
+        ]
+    },
+    "VisitaTecnica": {
+        "columnName": "",
+        "id": 6,
+        "name": "Visita Tecnica",
+        "inputs": [{
+                "name": "WorkOrder",
+                "type": "InputText",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "1,"
+            },
+            {
+                "name": "Cliente",
+                "type": "Picker",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "8,"
+            },
+            {
+                "name": "Serie",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "InputText",
+                "type": "Equipo",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "Fecha",
+                "type": "DatePicker",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "9,"
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [{
+                    "description": "maxLength",
+                    "value": 4
+                }],
+                "value": "",
+                "id": "6,"
+            }
+        ]
+    },
+    "TecladoEncryptor": {
+        "columnName": "",
+        "id": 7,
+        "name": "Teclado Encryptor",
+        "inputs": [{
+                "name": "WorkOrder",
+                "type": "InputText",
+                "properties": [{
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 10
+                    }
+                ],
+                "value": "",
+                "id": "1,"
+            },
+            {
+                "name": "Cliente",
+                "type": "Picker",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "8,"
+            },
+            {
+                "name": "InputText",
+                "type": "Equipo",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "Serie",
+                "type": "InputText",
+                "properties": [{
+                    "description": "required",
+                    "value": true
+                }],
+                "value": "",
+                "id": "7,"
+            },
+            {
+                "name": "Motivo",
+                "type": "GroupComponent",
+                "properties": [{
+                    "description": "inputs",
+                    "value": [{
+                            "type": "CheckBox",
+                            "id": 20,
+                            "value": false,
+                            "name": "Temperatura"
+                        },
+                        {
+                            "type": "CheckBox",
+                            "id": 21,
+                            "value": false,
+                            "name": "Golpe"
+                        },
+                        {
+                            "type": "CheckBox",
+                            "id": 22,
+                            "value": false,
+                            "name": "Electrico"
+                        },
+                        {
+                            "type": "CheckBox",
+                            "id": 23,
+                            "value": false,
+                            "name": "Otro"
+                        }
+                    ]
+                }],
+                "value": "",
+                "id": "19,"
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [{
+                    "description": "length",
+                    "value": 4
+                }],
+                "value": "",
+                "id": "6,"
+            }
+        ]
+    }
+}

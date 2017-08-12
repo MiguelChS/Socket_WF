@@ -1,0 +1,7 @@
+GET http://ncrapps.com/apiwf2/cliente/:uui (unico id  de devuelve todos los clientes)
+GET http://ncrapps.com/apiwf2/forms/:pais/:uui (pasa el Pais y el unico id te devulve todos los formularios)
+POST http://ncrapps.com/apiwf2/forms (pasar en el body el siguiente Json {userid: "(uui)","form":{
+                                                                                            "id":"12314854",
+                                                                                            "FormType":5,
+                                                                                            "data":{"workorder":"migudlasdasd"}
+                                                                                            }})
