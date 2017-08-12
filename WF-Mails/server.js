@@ -32,7 +32,7 @@ app.get("/Forms/:pais", (req, res) => {
     switch (req.params.pais) {
         case "AR":
             {
-                formularios = jsonData.filter(x => x.id == 1);
+                formularios = jsonData;
             }
         case "BR":
             {

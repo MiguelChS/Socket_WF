@@ -15,7 +15,6 @@ ioClient.on('getForms', function(data) {
         if (!error && response.statusCode == 200) {
             ioClient.emit('retornogetForms', { userid: data.userid, detail: JSON.parse(body) });
         } else {
-            console.log('error');
             ioClient.emit('retornogetForms', { userid: data.userid, detail: 'Error Get Cliente' });
         }
     });
@@ -26,7 +25,6 @@ ioClient.on('sendForms', function(data) {
         if (!err && httpResponse.statusCode == 200) {
             ioClient.emit('retornosendForms', { userid: data.userid, detail: true });
         } else {
-            console.log('error');
             ioClient.emit('retornosendForms', { userid: data.userid, detail: false });
         }
     })
