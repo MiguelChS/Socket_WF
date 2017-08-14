@@ -16,11 +16,11 @@ router.get("/:pais/:userid", (req, res) => {
 })
 
 router.post("/", (req, res) => {
+    console.log("---------- entrando form digital ocean ------------------");
+    console.log(req.body);
     var url = 'http://ncrapps.com:8080';
     var socket = io.connect(url);
     var datos = { userid: req.body.userid, form: req.body.form }
-    console.log("---------- entrando form digital ocean ------------------");
-    console.log(req.body);
     socket.on('connect', () => {
         socket.emit('setUserId', datos.userid);
         socket.emit('sendForms', datos);
