@@ -1,39 +1,50 @@
-[{
+[
+    {
         "id": 1,
         "name": "Environment",
-        "inputs": [{
+        "inputs": [
+            {
                 "id": 1,
                 "name": "WorkOrder",
                 "type": "InputNumber",
                 "value": "",
                 "columnName": "txtwo",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }, {
-                    "description": "length",
-                    "value": 9
-                }]
-            }, {
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 9
+                    }
+                ]
+            },
+            {
                 "id": 2,
                 "name": "Serie",
                 "type": "InputText",
                 "value": "",
                 "columnName": "txtserie",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
-            }, {
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
+            },
+            {
                 "id": 3,
                 "name": "Equipo",
                 "type": "InputText",
                 "value": "",
                 "columnName": "txtwo",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 4,
@@ -48,7 +59,8 @@
                 "type": "InputNumber",
                 "value": "",
                 "columnName": "txtparte",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -59,101 +71,109 @@
                 ]
             },
             {
-                "id": 6,
-                "name": "Comentario",
-                "type": "TextArea",
-                "value": "",
-                "columnName": "txtcomentario",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
-            },
-            {
                 "id": 7,
                 "name": "Problema Electrico",
                 "type": "GrupoComponent",
+                "columnName": "",
                 "value": {},
-                "properties": [{
-                    "description": "inputs",
-                    "value": [{
-                        "id": 1,
-                        "name": "Voltaje no regulado",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkvolnoregulado"
-                    }, {
-                        "id": 2,
-                        "name": "No posee UPS",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chknoups"
-                    }, {
-                        "id": 3,
-                        "name": "No posee tierra fisica",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chknotierrafisica"
-                    }, {
-                        "id": 4,
-                        "name": "Sin energia electrica",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chknoenergia"
-                    }]
-                }]
+                "properties": [
+                    {
+                        "description": "inputs",
+                        "value": [
+                            {
+                                "id": 1,
+                                "name": "Voltaje no regulado",
+                                "type": "VoltajeNoRegulado",
+                                "value": {},
+                                "columnName": "chkvolnoregulado"
+                            },
+                            {
+                                "id": 2,
+                                "name": "No posee UPS",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chknoups"
+                            },
+                            {
+                                "id": 3,
+                                "name": "No posee tierra fisica",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chknotierrafisica"
+                            },
+                            {
+                                "id": 4,
+                                "name": "Sin energia electrica",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chknoenergia"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "id": 8,
                 "name": "Problema de Site",
                 "type": "GrupoComponent",
                 "value": {},
-                "properties": [{
-                    "description": "inputs",
-                    "value": [{
-                        "id": 1,
-                        "name": "Suciedad",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chksuciedad"
-                    }, {
-                        "id": 2,
-                        "name": "Goteras",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkgoteras"
-                    }, {
-                        "id": 3,
-                        "name": "Plagas",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkplagas"
-                    }, {
-                        "id": 4,
-                        "name": "Exposicion directa al sol",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkexpsol"
-                    }, {
-                        "id": 5,
-                        "name": "Humedad",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkhumedad"
-                    }, {
-                        "id": 6,
-                        "name": "Mala iluminacion",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkmalailuminacion"
-                    }, {
-                        "id": 7,
-                        "name": "Sin AA/Calefaccion",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chknoaa"
-                    }]
-                }]
+                "columnName": "",
+                "properties": [
+                    {
+                        "description": "inputs",
+                        "value": [
+                            {
+                                "id": 1,
+                                "name": "Suciedad",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chksuciedad"
+                            },
+                            {
+                                "id": 2,
+                                "name": "Goteras",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkgoteras"
+                            },
+                            {
+                                "id": 3,
+                                "name": "Plagas",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkplagas"
+                            },
+                            {
+                                "id": 4,
+                                "name": "Exposicion directa al sol",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkexpsol"
+                            },
+                            {
+                                "id": 5,
+                                "name": "Humedad",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkhumedad"
+                            },
+                            {
+                                "id": 6,
+                                "name": "Mala iluminacion",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkmalailuminacion"
+                            },
+                            {
+                                "id": 7,
+                                "name": "Sin AA/Calefaccion",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chknoaa"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "id": 9,
@@ -161,74 +181,93 @@
                 "type": "Picker",
                 "value": "",
                 "columnName": "selcomunicaciones",
-                "properties": [{
-                    "description": "source",
-                    "value": ["Miguel", "Sanchez"]
-                }]
+                "properties": [
+                    {
+                        "description": "source",
+                        "value": [
+                            "Sin enlace",
+                            "Equipo de comns",
+                            "Cable de comns"
+                        ]
+                    }
+                ]
             },
             {
                 "id": 10,
                 "name": "Problema Operativo",
                 "type": "GrupoComponent",
                 "value": {},
-                "properties": [{
-                    "description": "inputs",
-                    "value": [{
-                        "id": 1,
-                        "name": "Sin insumos",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chksininsumos"
-                    }, {
-                        "id": 2,
-                        "name": "Sin billetes",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chksinbilletes"
-                    }, {
-                        "id": 3,
-                        "name": "Mala calidad billetes",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkmalacalidadbilletes"
-                    }, {
-                        "id": 4,
-                        "name": "Mala calidad insumos",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkmalacalidadinsumos"
-                    }, {
-                        "id": 5,
-                        "name": "Error operador",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkerroroperador"
-                    }, {
-                        "id": 6,
-                        "name": "Carga caseteras",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkcargainccaseteras"
-                    }, {
-                        "id": 7,
-                        "name": "Carga papel",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkcargaincpapel"
-                    }, {
-                        "id": 8,
-                        "name": "Error balanceo",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chkerrorbalanceo"
-                    }, {
-                        "id": 9,
-                        "name": "Supervisor",
-                        "type": "CheckBox",
-                        "value": false,
-                        "columnName": "chksupervisor"
-                    }]
-                }]
+                "columnName": "",
+                "properties": [
+                    {
+                        "description": "inputs",
+                        "value": [
+                            {
+                                "id": 1,
+                                "name": "Sin insumos",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chksininsumos"
+                            },
+                            {
+                                "id": 2,
+                                "name": "Sin billetes",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chksinbilletes"
+                            },
+                            {
+                                "id": 3,
+                                "name": "Mala calidad billetes",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkmalacalidadbilletes"
+                            },
+                            {
+                                "id": 4,
+                                "name": "Mala calidad insumos",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkmalacalidadinsumos"
+                            },
+                            {
+                                "id": 5,
+                                "name": "Error operador",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkerroroperador"
+                            },
+                            {
+                                "id": 6,
+                                "name": "Carga caseteras",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkcargainccaseteras"
+                            },
+                            {
+                                "id": 7,
+                                "name": "Carga papel",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkcargaincpapel"
+                            },
+                            {
+                                "id": 8,
+                                "name": "Error balanceo",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chkerrorbalanceo"
+                            },
+                            {
+                                "id": 9,
+                                "name": "Supervisor",
+                                "type": "CheckBox",
+                                "value": false,
+                                "columnName": "chksupervisor"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "id": 11,
@@ -245,37 +284,43 @@
                 "columnName": "chkprootros"
             },
             {
-                "id": 13,
-                "name": "Comentario",
-                "type": "TextArea",
-                "value": false,
-                "columnName": "txtcomentario",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
-            },
-            {
                 "id": 14,
                 "name": "Photos",
                 "type": "Photo",
                 "columnName": "foto",
                 "value": [],
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }]
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Comentario",
+                "type": "TextArea",
+                "value": "",
+                "columnName": "txtcomentario",
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             }
         ]
     },
     {
         "id": 2,
         "name": "Cambio Pin Pad",
-        "inputs": [{
+        "inputs": [
+            {
                 "name": "WorkOrder",
                 "type": "InputText",
                 "columnName": "",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -304,10 +349,12 @@
             {
                 "name": "Nro Pos",
                 "type": "InputNumber",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 4,
                 "columnName": ""
@@ -315,10 +362,12 @@
             {
                 "name": "Serie Saliente",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 5,
                 "columnName": ""
@@ -326,10 +375,12 @@
             {
                 "name": "Serie Entrante",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 6,
                 "columnName": ""
@@ -337,10 +388,12 @@
             {
                 "name": "Photos",
                 "type": "Photo",
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }],
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
                 "value": [],
                 "id": 7,
                 "columnName": ""
@@ -350,10 +403,12 @@
     {
         "id": 3,
         "name": "Logistic",
-        "inputs": [{
+        "inputs": [
+            {
                 "name": "WorkOrder",
                 "type": "InputText",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -369,7 +424,8 @@
             {
                 "name": "Parte",
                 "type": "InputNumber",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -399,10 +455,12 @@
             {
                 "name": "Comentario",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 5,
                 "columnName": ""
@@ -410,10 +468,12 @@
             {
                 "name": "Photos",
                 "type": "Photo",
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }],
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
                 "value": "",
                 "id": 6,
                 "columnName": ""
@@ -423,10 +483,12 @@
     {
         "id": 4,
         "name": "Memoria Fiscal",
-        "inputs": [{
+        "inputs": [
+            {
                 "name": "WorkOrder",
                 "type": "InputText",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -442,10 +504,12 @@
             {
                 "name": "Equipo",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 2,
                 "columnName": ""
@@ -453,10 +517,12 @@
             {
                 "name": "Cliente",
                 "type": "Picker",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 3,
                 "columnName": ""
@@ -492,10 +558,12 @@
             {
                 "name": "Serie Impresora",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 8,
                 "columnName": ""
@@ -503,10 +571,12 @@
             {
                 "name": "Photos",
                 "type": "Photo",
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }],
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
                 "value": "",
                 "id": 9,
                 "columnName": ""
@@ -516,10 +586,12 @@
     {
         "id": 5,
         "name": "Mantenimiento",
-        "inputs": [{
+        "inputs": [
+            {
                 "name": "WorkOrder",
                 "type": "InputText",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -535,10 +607,12 @@
             {
                 "name": "Serie",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 2,
                 "columnName": ""
@@ -546,10 +620,12 @@
             {
                 "name": "InputText",
                 "type": "Equipo",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 3,
                 "columnName": ""
@@ -557,10 +633,12 @@
             {
                 "name": "Cliente",
                 "type": "Picker",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 4,
                 "columnName": ""
@@ -568,10 +646,12 @@
             {
                 "name": "Fecha",
                 "type": "DatePicker",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 5,
                 "columnName": ""
@@ -579,10 +659,12 @@
             {
                 "name": "Comentario",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 6,
                 "columnName": ""
@@ -590,10 +672,12 @@
             {
                 "name": "Photos",
                 "type": "Photo",
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }],
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
                 "value": "",
                 "id": 7,
                 "columnName": ""
@@ -603,10 +687,12 @@
     {
         "id": 6,
         "name": "Visita Tecnica",
-        "inputs": [{
+        "inputs": [
+            {
                 "name": "WorkOrder",
                 "type": "InputText",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -622,10 +708,12 @@
             {
                 "name": "Cliente",
                 "type": "Picker",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 2,
                 "columnName": ""
@@ -633,10 +721,12 @@
             {
                 "name": "Serie",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 3,
                 "columnName": ""
@@ -644,10 +734,12 @@
             {
                 "name": "InputText",
                 "type": "Equipo",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 4,
                 "columnName": ""
@@ -655,10 +747,12 @@
             {
                 "name": "Fecha",
                 "type": "DatePicker",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 5,
                 "columnName": ""
@@ -666,10 +760,12 @@
             {
                 "name": "Photos",
                 "type": "Photo",
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }],
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
                 "value": "",
                 "id": 6,
                 "columnName": ""
@@ -679,10 +775,12 @@
     {
         "id": 7,
         "name": "Teclado Encryptor",
-        "inputs": [{
+        "inputs": [
+            {
                 "name": "WorkOrder",
                 "type": "InputText",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -698,10 +796,12 @@
             {
                 "name": "Cliente",
                 "type": "Picker",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 2,
                 "columnName": ""
@@ -709,10 +809,12 @@
             {
                 "name": "InputText",
                 "type": "Equipo",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 3,
                 "columnName": ""
@@ -720,10 +822,12 @@
             {
                 "name": "Serie",
                 "type": "InputText",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }],
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
                 "value": "",
                 "id": 4,
                 "columnName": ""
@@ -731,38 +835,41 @@
             {
                 "name": "Motivo",
                 "type": "GroupComponent",
-                "properties": [{
-                    "description": "inputs",
-                    "value": [{
-                            "type": "CheckBox",
-                            "id": 1,
-                            "value": false,
-                            "name": "Temperatura",
-                            "columnName": ""
-                        },
-                        {
-                            "type": "CheckBox",
-                            "id": 2,
-                            "value": false,
-                            "name": "Golpe",
-                            "columnName": ""
-                        },
-                        {
-                            "type": "CheckBox",
-                            "id": 3,
-                            "value": false,
-                            "name": "Electrico",
-                            "columnName": ""
-                        },
-                        {
-                            "type": "CheckBox",
-                            "id": 4,
-                            "value": false,
-                            "name": "Otro",
-                            "columnName": ""
-                        }
-                    ]
-                }],
+                "properties": [
+                    {
+                        "description": "inputs",
+                        "value": [
+                            {
+                                "type": "CheckBox",
+                                "id": 1,
+                                "value": false,
+                                "name": "Temperatura",
+                                "columnName": ""
+                            },
+                            {
+                                "type": "CheckBox",
+                                "id": 2,
+                                "value": false,
+                                "name": "Golpe",
+                                "columnName": ""
+                            },
+                            {
+                                "type": "CheckBox",
+                                "id": 3,
+                                "value": false,
+                                "name": "Electrico",
+                                "columnName": ""
+                            },
+                            {
+                                "type": "CheckBox",
+                                "id": 4,
+                                "value": false,
+                                "name": "Otro",
+                                "columnName": ""
+                            }
+                        ]
+                    }
+                ],
                 "value": {},
                 "id": 5
             },
@@ -770,10 +877,12 @@
                 "name": "Photos",
                 "type": "Photo",
                 "columnName": "",
-                "properties": [{
-                    "description": "maxLength",
-                    "value": 4
-                }],
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
                 "value": [],
                 "id": 6
             }
@@ -782,19 +891,23 @@
     {
         "id": 8,
         "name": "Devolucion de partes",
-        "inputs": [{
+        "inputs": [
+            {
                 "id": 1,
                 "name": "WareHouse",
                 "type": "InputText",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }, {
-                    "description": "length",
-                    "value": 8
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    },
+                    {
+                        "description": "length",
+                        "value": 8
+                    }
+                ]
             },
             {
                 "id": 2,
@@ -802,10 +915,12 @@
                 "type": "InputText",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 3,
@@ -813,10 +928,12 @@
                 "type": "DatePicker",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 4,
@@ -824,19 +941,47 @@
                 "type": "InputText",
                 "value": "",
                 "columnName": ""
+            },
+            {
+                "id": 5,
+                "name": "",
+                "type": "DevoluvionBuspackOca",
+                "value": "",
+                "columnName": "",
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Devolucion Parte",
+                "type": "DevoluvionParte",
+                "value": "",
+                "columnName": "",
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             }
         ]
     },
     {
         "id": 9,
         "name": "Recategorizacion",
-        "inputs": [{
+        "inputs": [
+            {
                 "id": 1,
                 "name": "WorkOrder",
                 "type": "InputNumber",
                 "value": "",
                 "columnName": "",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -852,10 +997,12 @@
                 "type": "InputText",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 3,
@@ -863,10 +1010,12 @@
                 "type": "AutoCompleteCliente",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 4,
@@ -874,10 +1023,12 @@
                 "type": "InputText",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 5,
@@ -885,10 +1036,12 @@
                 "type": "TextArea",
                 "value": "",
                 "columnName": "",
-                "properties": [{
-                    "description": "required",
-                    "value": true
-                }]
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ]
             },
             {
                 "id": 6,
@@ -896,7 +1049,8 @@
                 "type": "Picker",
                 "value": "",
                 "columnName": "",
-                "properties": [{
+                "properties": [
+                    {
                         "description": "required",
                         "value": true
                     },
@@ -927,5 +1081,4 @@
             }
         ]
     }
-
 ]
