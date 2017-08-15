@@ -75,7 +75,7 @@
                 "name": "Problema Electrico",
                 "type": "GrupoComponent",
                 "columnName": "",
-                "value": {},
+                "value": "{}",
                 "properties": [
                     {
                         "description": "inputs",
@@ -84,7 +84,7 @@
                                 "id": 1,
                                 "name": "Voltaje no regulado",
                                 "type": "VoltajeNoRegulado",
-                                "value": {},
+                                "value": "{}",
                                 "columnName": "chkvolnoregulado"
                             },
                             {
@@ -116,7 +116,7 @@
                 "id": 8,
                 "name": "Problema de Site",
                 "type": "GrupoComponent",
-                "value": {},
+                "value": "{}",
                 "columnName": "",
                 "properties": [
                     {
@@ -184,11 +184,7 @@
                 "properties": [
                     {
                         "description": "source",
-                        "value": [
-                            "Sin enlace",
-                            "Equipo de comns",
-                            "Cable de comns"
-                        ]
+                        "value": "[\"Sin enlace\",\"Equipo de comns\",\"Cable de comns\"]"
                     }
                 ]
             },
@@ -196,7 +192,7 @@
                 "id": 10,
                 "name": "Problema Operativo",
                 "type": "GrupoComponent",
-                "value": {},
+                "value": "{}",
                 "columnName": "",
                 "properties": [
                     {
@@ -288,7 +284,7 @@
                 "name": "Photos",
                 "type": "Photo",
                 "columnName": "foto",
-                "value": [],
+                "value": "[]",
                 "properties": [
                     {
                         "description": "maxLength",
@@ -317,8 +313,8 @@
         "inputs": [
             {
                 "name": "WorkOrder",
-                "type": "InputText",
-                "columnName": "",
+                "type": "InputNumber",
+                "columnName": "workorder",
                 "properties": [
                     {
                         "description": "required",
@@ -337,14 +333,14 @@
                 "id": 2,
                 "value": "",
                 "name": "Cust Ref",
-                "columnName": ""
+                "columnName": "custref"
             },
             {
                 "type": "InputText",
                 "id": 3,
                 "value": "",
                 "name": "Site Name",
-                "columnName": ""
+                "columnName": "sitename"
             },
             {
                 "name": "Nro Pos",
@@ -357,7 +353,7 @@
                 ],
                 "value": "",
                 "id": 4,
-                "columnName": ""
+                "columnName": "nropos"
             },
             {
                 "name": "Serie Saliente",
@@ -370,7 +366,7 @@
                 ],
                 "value": "",
                 "id": 5,
-                "columnName": ""
+                "columnName": "seriesaliente"
             },
             {
                 "name": "Serie Entrante",
@@ -383,7 +379,7 @@
                 ],
                 "value": "",
                 "id": 6,
-                "columnName": ""
+                "columnName": "serieentrante"
             },
             {
                 "name": "Photos",
@@ -394,9 +390,9 @@
                         "value": 4
                     }
                 ],
-                "value": [],
+                "value": "[]",
                 "id": 7,
-                "columnName": ""
+                "columnName": "foto"
             }
         ]
     },
@@ -406,7 +402,7 @@
         "inputs": [
             {
                 "name": "WorkOrder",
-                "type": "InputText",
+                "type": "InputNumber",
                 "properties": [
                     {
                         "description": "required",
@@ -414,12 +410,12 @@
                     },
                     {
                         "description": "length",
-                        "value": 10
+                        "value": 9
                     }
                 ],
                 "value": "",
                 "id": 1,
-                "columnName": ""
+                "columnName": "txtwo"
             },
             {
                 "name": "Parte",
@@ -436,25 +432,25 @@
                 ],
                 "value": "",
                 "id": 2,
-                "columnName": ""
+                "columnName": "txtparte"
             },
             {
                 "type": "InputText",
                 "id": 3,
                 "value": "",
                 "name": "Retorno",
-                "columnName": ""
+                "columnName": "txtretorno"
             },
             {
                 "type": "InputText",
                 "id": 4,
                 "value": "",
                 "name": "Ref Reparador",
-                "columnName": ""
+                "columnName": "txtreparador"
             },
             {
                 "name": "Comentario",
-                "type": "InputText",
+                "type": "TextArea",
                 "properties": [
                     {
                         "description": "required",
@@ -463,7 +459,7 @@
                 ],
                 "value": "",
                 "id": 5,
-                "columnName": ""
+                "columnName": "txtcomentario"
             },
             {
                 "name": "Photos",
@@ -474,9 +470,9 @@
                         "value": 4
                     }
                 ],
-                "value": "",
+                "value": "[]",
                 "id": 6,
-                "columnName": ""
+                "columnName": "foto"
             }
         ]
     },
@@ -486,7 +482,7 @@
         "inputs": [
             {
                 "name": "WorkOrder",
-                "type": "InputText",
+                "type": "InputNumber",
                 "properties": [
                     {
                         "description": "required",
@@ -494,12 +490,12 @@
                     },
                     {
                         "description": "length",
-                        "value": 10
+                        "value": 9
                     }
                 ],
                 "value": "",
                 "id": 1,
-                "columnName": ""
+                "columnName": "workorder"
             },
             {
                 "name": "Equipo",
@@ -512,11 +508,11 @@
                 ],
                 "value": "",
                 "id": 2,
-                "columnName": ""
+                "columnName": "serie"
             },
             {
                 "name": "Cliente",
-                "type": "Picker",
+                "type": "AutoCompleteCliente",
                 "properties": [
                     {
                         "description": "required",
@@ -525,35 +521,35 @@
                 ],
                 "value": "",
                 "id": 3,
-                "columnName": ""
+                "columnName": "cliente"
             },
             {
                 "type": "InputText",
                 "id": 4,
                 "value": "",
                 "name": "Cust Ref",
-                "columnName": ""
+                "columnName": "custref"
             },
             {
                 "type": "InputText",
                 "id": 5,
                 "value": "",
                 "name": "Site Name",
-                "columnName": ""
+                "columnName": "sitename"
             },
             {
                 "type": "InputText",
                 "id": 6,
                 "value": "",
                 "name": "Nro Punto Venta",
-                "columnName": ""
+                "columnName": "nropuntoventa"
             },
             {
                 "type": "InputText",
                 "id": 7,
                 "value": "",
                 "name": "Ver.Firmware placa fiscal",
-                "columnName": ""
+                "columnName": "verfirmplacafiscal"
             },
             {
                 "name": "Serie Impresora",
@@ -566,7 +562,7 @@
                 ],
                 "value": "",
                 "id": 8,
-                "columnName": ""
+                "columnName": "serieimpresora"
             },
             {
                 "name": "Photos",
@@ -577,9 +573,9 @@
                         "value": 4
                     }
                 ],
-                "value": "",
+                "value": "[]",
                 "id": 9,
-                "columnName": ""
+                "columnName": "foto"
             }
         ]
     },
@@ -589,7 +585,7 @@
         "inputs": [
             {
                 "name": "WorkOrder",
-                "type": "InputText",
+                "type": "InputNumber",
                 "properties": [
                     {
                         "description": "required",
@@ -597,12 +593,12 @@
                     },
                     {
                         "description": "length",
-                        "value": 10
+                        "value": 9
                     }
                 ],
                 "value": "",
                 "id": 1,
-                "columnName": ""
+                "columnName": "txtwo"
             },
             {
                 "name": "Serie",
@@ -615,7 +611,7 @@
                 ],
                 "value": "",
                 "id": 2,
-                "columnName": ""
+                "columnName": "txtserial"
             },
             {
                 "name": "InputText",
@@ -628,11 +624,11 @@
                 ],
                 "value": "",
                 "id": 3,
-                "columnName": ""
+                "columnName": "txtequipo"
             },
             {
                 "name": "Cliente",
-                "type": "Picker",
+                "type": "AutoCompleteCliente",
                 "properties": [
                     {
                         "description": "required",
@@ -641,7 +637,7 @@
                 ],
                 "value": "",
                 "id": 4,
-                "columnName": ""
+                "columnName": "selcliente"
             },
             {
                 "name": "Fecha",
@@ -654,11 +650,11 @@
                 ],
                 "value": "",
                 "id": 5,
-                "columnName": ""
+                "columnName": "txtfechamp"
             },
             {
                 "name": "Comentario",
-                "type": "InputText",
+                "type": "TextArea",
                 "properties": [
                     {
                         "description": "required",
@@ -667,7 +663,7 @@
                 ],
                 "value": "",
                 "id": 6,
-                "columnName": ""
+                "columnName": "txtcomentario"
             },
             {
                 "name": "Photos",
@@ -678,9 +674,9 @@
                         "value": 4
                     }
                 ],
-                "value": "",
+                "value": "[]",
                 "id": 7,
-                "columnName": ""
+                "columnName": "foto"
             }
         ]
     },
@@ -690,7 +686,7 @@
         "inputs": [
             {
                 "name": "WorkOrder",
-                "type": "InputText",
+                "type": "InputNumber",
                 "properties": [
                     {
                         "description": "required",
@@ -698,16 +694,16 @@
                     },
                     {
                         "description": "length",
-                        "value": 10
+                        "value": 9
                     }
                 ],
                 "value": "",
                 "id": 1,
-                "columnName": ""
+                "columnName": "txtwo"
             },
             {
                 "name": "Cliente",
-                "type": "Picker",
+                "type": "AutoCompleteCliente",
                 "properties": [
                     {
                         "description": "required",
@@ -716,7 +712,7 @@
                 ],
                 "value": "",
                 "id": 2,
-                "columnName": ""
+                "columnName": "selcliente"
             },
             {
                 "name": "Serie",
@@ -729,7 +725,7 @@
                 ],
                 "value": "",
                 "id": 3,
-                "columnName": ""
+                "columnName": "txtserial"
             },
             {
                 "name": "InputText",
@@ -742,7 +738,7 @@
                 ],
                 "value": "",
                 "id": 4,
-                "columnName": ""
+                "columnName": "txtequipo"
             },
             {
                 "name": "Fecha",
@@ -755,7 +751,7 @@
                 ],
                 "value": "",
                 "id": 5,
-                "columnName": ""
+                "columnName": "txtfechavi"
             },
             {
                 "name": "Photos",
@@ -766,9 +762,9 @@
                         "value": 4
                     }
                 ],
-                "value": "",
+                "value": "[]",
                 "id": 6,
-                "columnName": ""
+                "columnName": "foto"
             }
         ]
     },
@@ -778,7 +774,7 @@
         "inputs": [
             {
                 "name": "WorkOrder",
-                "type": "InputText",
+                "type": "InputNumber",
                 "properties": [
                     {
                         "description": "required",
@@ -786,16 +782,16 @@
                     },
                     {
                         "description": "length",
-                        "value": 10
+                        "value": 9
                     }
                 ],
                 "value": "",
                 "id": 1,
-                "columnName": ""
+                "columnName": "workorder"
             },
             {
                 "name": "Cliente",
-                "type": "Picker",
+                "type": "AutoCompleteCliente",
                 "properties": [
                     {
                         "description": "required",
@@ -804,7 +800,7 @@
                 ],
                 "value": "",
                 "id": 2,
-                "columnName": ""
+                "columnName": "selcliente"
             },
             {
                 "name": "InputText",
@@ -817,7 +813,7 @@
                 ],
                 "value": "",
                 "id": 3,
-                "columnName": ""
+                "columnName": "equipo"
             },
             {
                 "name": "Serie",
@@ -830,60 +826,35 @@
                 ],
                 "value": "",
                 "id": 4,
-                "columnName": ""
+                "columnName": "serie"
             },
             {
                 "name": "Motivo",
-                "type": "GroupComponent",
+                "type": "Picker",
+                "value": "",
+                "id": 5,
+                "columnName": "motivodanio",
                 "properties": [
                     {
-                        "description": "inputs",
-                        "value": [
-                            {
-                                "type": "CheckBox",
-                                "id": 1,
-                                "value": false,
-                                "name": "Temperatura",
-                                "columnName": ""
-                            },
-                            {
-                                "type": "CheckBox",
-                                "id": 2,
-                                "value": false,
-                                "name": "Golpe",
-                                "columnName": ""
-                            },
-                            {
-                                "type": "CheckBox",
-                                "id": 3,
-                                "value": false,
-                                "name": "Electrico",
-                                "columnName": ""
-                            },
-                            {
-                                "type": "CheckBox",
-                                "id": 4,
-                                "value": false,
-                                "name": "Otro",
-                                "columnName": ""
-                            }
-                        ]
+                        "description": "required",
+                        "value": true
+                    },{
+                        "description": "source",
+                        "value": "[\"Temperatura\",\"Golpe\",\"Electrico\",\"Otro\"]"
                     }
-                ],
-                "value": {},
-                "id": 5
+                ]
             },
             {
                 "name": "Photos",
                 "type": "Photo",
-                "columnName": "",
+                "columnName": "foto",
                 "properties": [
                     {
                         "description": "maxLength",
                         "value": 4
                     }
                 ],
-                "value": [],
+                "value": "[]",
                 "id": 6
             }
         ]
@@ -897,7 +868,7 @@
                 "name": "WareHouse",
                 "type": "InputText",
                 "value": "",
-                "columnName": "",
+                "columnName": "warehouse",
                 "properties": [
                     {
                         "description": "required",
@@ -914,7 +885,7 @@
                 "name": "Localidad",
                 "type": "InputText",
                 "value": "",
-                "columnName": "",
+                "columnName": "localidad",
                 "properties": [
                     {
                         "description": "required",
@@ -927,7 +898,7 @@
                 "name": "Fecha",
                 "type": "DatePicker",
                 "value": "",
-                "columnName": "",
+                "columnName": "txtfecha",
                 "properties": [
                     {
                         "description": "required",
@@ -940,14 +911,14 @@
                 "name": "Guia DHL",
                 "type": "InputText",
                 "value": "",
-                "columnName": ""
+                "columnName": "guiadhl"
             },
             {
                 "id": 5,
                 "name": "",
                 "type": "DevoluvionBuspackOca",
-                "value": "",
-                "columnName": "",
+                "value": "{}",
+                "columnName": "gng",
                 "properties": [
                     {
                         "description": "required",
@@ -959,8 +930,8 @@
                 "id": 6,
                 "name": "Devolucion Parte",
                 "type": "DevoluvionParte",
-                "value": "",
-                "columnName": "",
+                "value": "[]",
+                "columnName": "partes",
                 "properties": [
                     {
                         "description": "required",
@@ -1056,26 +1027,7 @@
                     },
                     {
                         "description": "source",
-                        "value": [
-                            "Dispensador - Persiana Rota Gaveta",
-                            "Dispensador - Calidad Provision",
-                            "Dispensador - Colocacion Provision",
-                            "Impresora - Calidad Insumo",
-                            "Impresora - Colocacion Insumo",
-                            "Site - Aire Acondicionado",
-                            "Site - Suciedad del site",
-                            "Site - Plagas",
-                            "Site - Instalacion Electrica",
-                            "Comunicaciones - Equipos o Cables Desconectados",
-                            "Site - UPS",
-                            "Site - No Pago de Servicios",
-                            "Site - Servicio Electrico",
-                            "Seguridad - Alarmas",
-                            "Seguridad - Video",
-                            "Seguridad - Cerradura",
-                            "Seguridad - Chapas",
-                            "Seguridad - Servicios Locativos"
-                        ]
+                        "value": "[\"Dispensador - Persiana Rota Gaveta\",\"Dispensador - Calidad Provision\",\"Dispensador - Colocacion Provision\",\"Impresora - Calidad Insumo\",\"Impresora - Colocacion Insumo\",\"Site - Aire Acondicionado\",\"Site - Suciedad del site\",\"Site - Plagas\",\"Site - Instalacion Electrica\",\"Comunicaciones - Equipos o Cables Desconectados\",\"Site - UPS\",\"Site - No Pago de Servicios\",\"Site - Servicio Electrico\",\"Seguridad - Alarmas\",\"Seguridad - Video\",\"Seguridad - Cerradura\",\"Seguridad - Chapas\",\"Seguridad - Servicios Locativos\"]"
                     }
                 ]
             }
