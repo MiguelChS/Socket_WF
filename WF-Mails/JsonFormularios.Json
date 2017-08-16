@@ -79,36 +79,7 @@
                 "properties": [
                     {
                         "description": "inputs",
-                        "value": [
-                            {
-                                "id": 1,
-                                "name": "Voltaje no regulado",
-                                "type": "VoltajeNoRegulado",
-                                "value": "{}",
-                                "columnName": "chkvolnoregulado"
-                            },
-                            {
-                                "id": 2,
-                                "name": "No posee UPS",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chknoups"
-                            },
-                            {
-                                "id": 3,
-                                "name": "No posee tierra fisica",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chknotierrafisica"
-                            },
-                            {
-                                "id": 4,
-                                "name": "Sin energia electrica",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chknoenergia"
-                            }
-                        ]
+                        "value": "[{\"id\":1,\"name\":\"Voltaje no regulado\",\"type\":\"VoltajeNoRegulado\",\"value\":\"{}\",\"columnName\":\"chkvolnoregulado\"},{\"id\":2,\"name\":\"No posee UPS\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoups\"},{\"id\":3,\"name\":\"No posee tierra fisica\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknotierrafisica\"},{\"id\":4,\"name\":\"Sin energia electrica\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoenergia\"}]"
                     }
                 ]
             },
@@ -121,57 +92,7 @@
                 "properties": [
                     {
                         "description": "inputs",
-                        "value": [
-                            {
-                                "id": 1,
-                                "name": "Suciedad",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chksuciedad"
-                            },
-                            {
-                                "id": 2,
-                                "name": "Goteras",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkgoteras"
-                            },
-                            {
-                                "id": 3,
-                                "name": "Plagas",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkplagas"
-                            },
-                            {
-                                "id": 4,
-                                "name": "Exposicion directa al sol",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkexpsol"
-                            },
-                            {
-                                "id": 5,
-                                "name": "Humedad",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkhumedad"
-                            },
-                            {
-                                "id": 6,
-                                "name": "Mala iluminacion",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkmalailuminacion"
-                            },
-                            {
-                                "id": 7,
-                                "name": "Sin AA/Calefaccion",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chknoaa"
-                            }
-                        ]
+                        "value":"{\"id\":1,\"name\":\"Suciedad\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chksuciedad\"},{\"id\":2,\"name\":\"Goteras\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkgoteras\"},{\"id\":3,\"name\":\"Plagas\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkplagas\"},{\"id\":4,\"name\":\"Exposicion directa al sol\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkexpsol\"},{\"id\":5,\"name\":\"Humedad\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkhumedad\"},{\"id\":6,\"name\":\"Mala iluminacion\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkmalailuminacion\"},{\"id\":7,\"name\":\"Sin AA/Calefaccion\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoaa\"}]"
                     }
                 ]
             },
@@ -197,71 +118,7 @@
                 "properties": [
                     {
                         "description": "inputs",
-                        "value": [
-                            {
-                                "id": 1,
-                                "name": "Sin insumos",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chksininsumos"
-                            },
-                            {
-                                "id": 2,
-                                "name": "Sin billetes",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chksinbilletes"
-                            },
-                            {
-                                "id": 3,
-                                "name": "Mala calidad billetes",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkmalacalidadbilletes"
-                            },
-                            {
-                                "id": 4,
-                                "name": "Mala calidad insumos",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkmalacalidadinsumos"
-                            },
-                            {
-                                "id": 5,
-                                "name": "Error operador",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkerroroperador"
-                            },
-                            {
-                                "id": 6,
-                                "name": "Carga caseteras",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkcargainccaseteras"
-                            },
-                            {
-                                "id": 7,
-                                "name": "Carga papel",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkcargaincpapel"
-                            },
-                            {
-                                "id": 8,
-                                "name": "Error balanceo",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chkerrorbalanceo"
-                            },
-                            {
-                                "id": 9,
-                                "name": "Supervisor",
-                                "type": "CheckBox",
-                                "value": false,
-                                "columnName": "chksupervisor"
-                            }
-                        ]
+                        "value": "[{\"id\":1,\"name\":\"Sin insumos\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chksininsumos\"},{\"id\":2,\"name\":\"Sin billetes\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chksinbilletes\"},{\"id\":3,\"name\":\"Mala calidad billetes\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkmalacalidadbilletes\"},{\"id\":4,\"name\":\"Mala calidad insumos\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkmalacalidadinsumos\"},{\"id\":5,\"name\":\"Error operador\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkerroroperador\"},{\"id\":6,\"name\":\"Carga caseteras\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkcargainccaseteras\"},{\"id\":7,\"name\":\"Carga papel\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkcargaincpapel\"},{\"id\":8,\"name\":\"Error balanceo\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkerrorbalanceo\"},{\"id\":9,\"name\":\"Supervisor\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chksupervisor\"}]"
                     }
                 ]
             },
