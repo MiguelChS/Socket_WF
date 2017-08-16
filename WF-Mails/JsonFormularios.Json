@@ -71,6 +71,19 @@
                 ]
             },
             {
+                "name": "Cliente",
+                "type": "AutoCompleteCliente",
+                "properties": [
+                    {
+                        "description": "required",
+                        "value": true
+                    }
+                ],
+                "value": "",
+                "id": 13,
+                "columnName": "selcliente"
+            },
+            {
                 "id": 7,
                 "name": "Problema Electrico",
                 "type": "GrupoComponent",
