@@ -183,18 +183,18 @@
                     }
                 ],
                 "value": "",
-                "id": 1
+                "id": 21
             },
             {
                 "type": "InputText",
-                "id": 2,
+                "id": 22,
                 "value": "",
                 "name": "Cust Ref",
                 "columnName": "custref"
             },
             {
                 "type": "InputText",
-                "id": 3,
+                "id": 23,
                 "value": "",
                 "name": "Site Name",
                 "columnName": "sitename"
@@ -209,7 +209,7 @@
                     }
                 ],
                 "value": "",
-                "id": 4,
+                "id": 24,
                 "columnName": "nropos"
             },
             {
@@ -222,7 +222,7 @@
                     }
                 ],
                 "value": "",
-                "id": 5,
+                "id": 25,
                 "columnName": "seriesaliente"
             },
             {
@@ -235,7 +235,7 @@
                     }
                 ],
                 "value": "",
-                "id": 6,
+                "id": 26,
                 "columnName": "serieentrante"
             },
             {
@@ -248,7 +248,7 @@
                     }
                 ],
                 "value": "[]",
-                "id": 7,
+                "id": 27,
                 "columnName": "foto"
             }
         ]
@@ -271,7 +271,7 @@
                     }
                 ],
                 "value": "",
-                "id": 1,
+                "id": 31,
                 "columnName": "txtwo"
             },
             {
@@ -288,19 +288,19 @@
                     }
                 ],
                 "value": "",
-                "id": 2,
+                "id": 32,
                 "columnName": "txtparte"
             },
             {
                 "type": "InputText",
-                "id": 3,
+                "id": 34,
                 "value": "",
                 "name": "Retorno",
                 "columnName": "txtretorno"
             },
             {
                 "type": "InputText",
-                "id": 4,
+                "id": 35,
                 "value": "",
                 "name": "Ref Reparador",
                 "columnName": "txtreparador"
@@ -315,7 +315,7 @@
                     }
                 ],
                 "value": "",
-                "id": 5,
+                "id": 36,
                 "columnName": "txtcomentario"
             },
             {
@@ -328,7 +328,7 @@
                     }
                 ],
                 "value": "[]",
-                "id": 6,
+                "id": 37,
                 "columnName": "foto"
             }
         ]
@@ -351,7 +351,7 @@
                     }
                 ],
                 "value": "",
-                "id": 1,
+                "id": 41,
                 "columnName": "workorder"
             },
             {
@@ -364,7 +364,7 @@
                     }
                 ],
                 "value": "",
-                "id": 2,
+                "id": 42,
                 "columnName": "serie"
             },
             {
@@ -377,33 +377,33 @@
                     }
                 ],
                 "value": "",
-                "id": 3,
+                "id": 43,
                 "columnName": "cliente"
             },
             {
                 "type": "InputText",
-                "id": 4,
+                "id": 44,
                 "value": "",
                 "name": "Cust Ref",
                 "columnName": "custref"
             },
             {
                 "type": "InputText",
-                "id": 5,
+                "id": 45,
                 "value": "",
                 "name": "Site Name",
                 "columnName": "sitename"
             },
             {
                 "type": "InputText",
-                "id": 6,
+                "id": 46,
                 "value": "",
                 "name": "Nro Punto Venta",
                 "columnName": "nropuntoventa"
             },
             {
                 "type": "InputText",
-                "id": 7,
+                "id": 47,
                 "value": "",
                 "name": "Ver.Firmware placa fiscal",
                 "columnName": "verfirmplacafiscal"
@@ -418,7 +418,7 @@
                     }
                 ],
                 "value": "",
-                "id": 8,
+                "id": 48,
                 "columnName": "serieimpresora"
             },
             {
@@ -431,7 +431,7 @@
                     }
                 ],
                 "value": "[]",
-                "id": 9,
+                "id": 49,
                 "columnName": "foto"
             }
         ]
@@ -454,7 +454,7 @@
                     }
                 ],
                 "value": "",
-                "id": 1,
+                "id": 51,
                 "columnName": "txtwo"
             },
             {
@@ -467,7 +467,7 @@
                     }
                 ],
                 "value": "",
-                "id": 2,
+                "id": 52,
                 "columnName": "txtserial"
             },
             {
@@ -480,7 +480,7 @@
                     }
                 ],
                 "value": "",
-                "id": 3,
+                "id": 53,
                 "columnName": "txtequipo"
             },
             {
@@ -493,7 +493,7 @@
                     }
                 ],
                 "value": "",
-                "id": 4,
+                "id": 54,
                 "columnName": "selcliente"
             },
             {
@@ -506,7 +506,7 @@
                     }
                 ],
                 "value": "",
-                "id": 5,
+                "id": 55,
                 "columnName": "txtfechamp"
             },
             {
@@ -519,7 +519,7 @@
                     }
                 ],
                 "value": "",
-                "id": 6,
+                "id": 56,
                 "columnName": "txtcomentario"
             },
             {
@@ -532,7 +532,7 @@
                     }
                 ],
                 "value": "[]",
-                "id": 7,
+                "id": 57,
                 "columnName": "foto"
             }
         ]
@@ -555,7 +555,7 @@
                     }
                 ],
                 "value": "",
-                "id": 1,
+                "id": 61,
                 "columnName": "txtwo"
             },
             {
@@ -568,7 +568,7 @@
                     }
                 ],
                 "value": "",
-                "id": 2,
+                "id": 62,
                 "columnName": "selcliente"
             },
             {
@@ -581,7 +581,7 @@
                     }
                 ],
                 "value": "",
-                "id": 3,
+                "id": 63,
                 "columnName": "txtserial"
             },
             {
@@ -594,7 +594,7 @@
                     }
                 ],
                 "value": "",
-                "id": 4,
+                "id": 64,
                 "columnName": "txtequipo"
             },
             {
@@ -607,7 +607,7 @@
                     }
                 ],
                 "value": "",
-                "id": 5,
+                "id": 65,
                 "columnName": "txtfechavi"
             },
             {
@@ -620,7 +620,7 @@
                     }
                 ],
                 "value": "[]",
-                "id": 6,
+                "id": 66,
                 "columnName": "foto"
             }
         ]
@@ -643,7 +643,7 @@
                     }
                 ],
                 "value": "",
-                "id": 1,
+                "id": 71,
                 "columnName": "workorder"
             },
             {
@@ -656,7 +656,7 @@
                     }
                 ],
                 "value": "",
-                "id": 2,
+                "id": 72,
                 "columnName": "selcliente"
             },
             {
@@ -669,7 +669,7 @@
                     }
                 ],
                 "value": "",
-                "id": 3,
+                "id": 73,
                 "columnName": "equipo"
             },
             {
@@ -682,14 +682,14 @@
                     }
                 ],
                 "value": "",
-                "id": 4,
+                "id": 74,
                 "columnName": "serie"
             },
             {
                 "name": "Motivo",
                 "type": "Picker",
                 "value": "",
-                "id": 5,
+                "id": 75,
                 "columnName": "motivodanio",
                 "properties": [
                     {
@@ -712,7 +712,7 @@
                     }
                 ],
                 "value": "[]",
-                "id": 6
+                "id": 76
             }
         ]
     },
@@ -721,7 +721,7 @@
         "name": "Devolucion de partes",
         "inputs": [
             {
-                "id": 1,
+                "id": 81,
                 "name": "WareHouse",
                 "type": "InputText",
                 "value": "",
@@ -738,7 +738,7 @@
                 ]
             },
             {
-                "id": 2,
+                "id": 82,
                 "name": "Localidad",
                 "type": "InputText",
                 "value": "",
@@ -751,7 +751,7 @@
                 ]
             },
             {
-                "id": 3,
+                "id": 83,
                 "name": "Fecha",
                 "type": "DatePicker",
                 "value": "",
@@ -764,14 +764,14 @@
                 ]
             },
             {
-                "id": 4,
+                "id": 84,
                 "name": "Guia DHL",
                 "type": "InputText",
                 "value": "",
                 "columnName": "guiadhl"
             },
             {
-                "id": 5,
+                "id": 85,
                 "name": "",
                 "type": "DevoluvionBuspackOca",
                 "value": "{}",
@@ -784,7 +784,7 @@
                 ]
             },
             {
-                "id": 6,
+                "id": 86,
                 "name": "Devolucion Parte",
                 "type": "DevoluvionParte",
                 "value": "[]",
@@ -803,7 +803,7 @@
         "name": "Recategorizacion",
         "inputs": [
             {
-                "id": 1,
+                "id": 91,
                 "name": "WorkOrder",
                 "type": "InputNumber",
                 "value": "",
@@ -820,7 +820,7 @@
                 ]
             },
             {
-                "id": 2,
+                "id": 92,
                 "name": "Equipo",
                 "type": "InputText",
                 "value": "",
@@ -833,7 +833,7 @@
                 ]
             },
             {
-                "id": 3,
+                "id": 93,
                 "name": "Cliente",
                 "type": "AutoCompleteCliente",
                 "value": "",
@@ -846,7 +846,7 @@
                 ]
             },
             {
-                "id": 4,
+                "id": 94,
                 "name": "Cust Ref #",
                 "type": "InputText",
                 "value": "",
@@ -859,7 +859,7 @@
                 ]
             },
             {
-                "id": 5,
+                "id": 95,
                 "name": "Comentario",
                 "type": "TextArea",
                 "value": "",
@@ -872,7 +872,7 @@
                 ]
             },
             {
-                "id": 6,
+                "id": 96,
                 "name": "Categoria",
                 "type": "Picker",
                 "value": "",
