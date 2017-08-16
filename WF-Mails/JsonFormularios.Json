@@ -92,7 +92,7 @@
                 "properties": [
                     {
                         "description": "inputs",
-                        "value":"{\"id\":1,\"name\":\"Suciedad\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chksuciedad\"},{\"id\":2,\"name\":\"Goteras\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkgoteras\"},{\"id\":3,\"name\":\"Plagas\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkplagas\"},{\"id\":4,\"name\":\"Exposicion directa al sol\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkexpsol\"},{\"id\":5,\"name\":\"Humedad\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkhumedad\"},{\"id\":6,\"name\":\"Mala iluminacion\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkmalailuminacion\"},{\"id\":7,\"name\":\"Sin AA/Calefaccion\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoaa\"}]"
+                        "value":"[{\"id\":1,\"name\":\"Suciedad\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chksuciedad\"},{\"id\":2,\"name\":\"Goteras\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkgoteras\"},{\"id\":3,\"name\":\"Plagas\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkplagas\"},{\"id\":4,\"name\":\"Exposicion directa al sol\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkexpsol\"},{\"id\":5,\"name\":\"Humedad\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkhumedad\"},{\"id\":6,\"name\":\"Mala iluminacion\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chkmalailuminacion\"},{\"id\":7,\"name\":\"Sin AA/Calefaccion\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoaa\"}]"
                     }
                 ]
             },
