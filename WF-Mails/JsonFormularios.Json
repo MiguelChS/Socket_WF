@@ -269,14 +269,14 @@
                 "id": 11,
                 "name": "Problema de Vandalismos",
                 "type": "CheckBox",
-                "value": false,
+                "value": "false",
                 "columnName": "chkprovandalismo"
             },
             {
                 "id": 12,
                 "name": "Otros Problemas",
                 "type": "CheckBox",
-                "value": false,
+                "value": "false",
                 "columnName": "chkprootros"
             },
             {
