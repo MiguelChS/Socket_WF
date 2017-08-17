@@ -878,14 +878,14 @@ let Entidad = {
         nameForm: {
             value: "Recategorizacion",
         },
-        workorder: {
+        workOrder: {
             label: "WorkOrder",
             value: null,
             set: function(value) {
                 this.value = value;
             }
         },
-        numeroEquipo: {
+        nroEquipo: {
             label: "Numero de Equipo",
             value: null,
             set: function(value) {
@@ -908,6 +908,13 @@ let Entidad = {
         },
         falla: {
             label: "Falla",
+            value: null,
+            set: function(value) {
+                this.value = value;
+            }
+        },
+        fechaCreacion: {
+            label: "Fecha Creacion",
             value: null,
             set: function(value) {
                 this.value = value;

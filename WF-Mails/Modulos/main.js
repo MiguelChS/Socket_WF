@@ -290,12 +290,13 @@ function formateDataToOld(array) {
             }
             case "9": {
                 formulario.recategorizacion.push(Object.assign({},FormParse,{
-                    "workorder":objForm.data["91"],
-                    "numeroEquipo":objForm.data["92"],
+                    "workOrder":objForm.data["91"],
+                    "nroEquipo":objForm.data["92"],
                     "custRefNum":objForm.data["94"],
                     "comentario":objForm.data["95"],
                     "falla":objForm.data["96"],
-                    "cliente":objForm.data["93"]
+                    "cliente":objForm.data["93"],
+                    "fechaCreacion":objForm.data["date"]
                 }))
                 break;
             }
