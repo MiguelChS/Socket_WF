@@ -92,7 +92,7 @@
                 "properties": [
                     {
                         "description": "inputs",
-                        "value": "[{\"id\":1,\"name\":\"Voltaje no regulado\",\"type\":\"VoltajeNoRegulado\",\"value\":\"{}\",\"columnName\":\"chkvolnoregulado\"},{\"id\":2,\"name\":\"No posee UPS\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoups\"},{\"id\":3,\"name\":\"No posee tierra fisica\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknotierrafisica\"},{\"id\":4,\"name\":\"Sin energia electrica\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoenergia\"}]"
+                        "value": "[{\"id\":1,\"name\":\"Voltaje no regulado\",\"type\":\"VoltajeNoRegulado\",\"value\":{},\"columnName\":\"chkvolnoregulado\"},{\"id\":2,\"name\":\"No posee UPS\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoups\"},{\"id\":3,\"name\":\"No posee tierra fisica\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknotierrafisica\"},{\"id\":4,\"name\":\"Sin energia electrica\",\"type\":\"CheckBox\",\"value\":false,\"columnName\":\"chknoenergia\"}]"
                     }
                 ]
             },

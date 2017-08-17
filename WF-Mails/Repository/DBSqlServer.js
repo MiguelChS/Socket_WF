@@ -9,7 +9,7 @@ var sql = require('mssql');
 var config = {
     user: 'ta_forms',
     password: 'teamanalysis',
-    server: 'SARBUE8001\\TA_MIRROR',
+    server: 'SARBUE8001',
     database: 'Forms'
 };
 

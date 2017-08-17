@@ -28,23 +28,27 @@ app.post("/Forms", (req, res) => {
 
 app.get("/Forms/:pais", (req, res) => {
     let formularios = [];
-    let jsonData = JSON.parse(fs.readFileSync('./JsonFormularios.Json', 'utf8'));
+    let jsonData = JSON.parse(fs.readFileSync('./JsonFormularios.json', 'utf8'));
     switch (req.params.pais) {
         case "AR":
             {
-                formularios = jsonData;
+                formularios = jsonData.filter(x => x.id != 9);
+                break;
             }
         case "BR":
             {
-
+                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6)
+                break;
             }
         case "CO":
-            {
-
+            {   
+                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6)
+                break;
             }
         case "CL":
             {
-
+                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6 || x.id == 9) 
+                break;
             }
     }
 
