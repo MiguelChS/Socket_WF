@@ -76,82 +76,99 @@ function InitProcess() {
 
 function formateDataToOld(array) {
     let formulario = {
-        environment:[],
-        cambiopidpad:[],
-        logistic:[],
-        memoriafiscal:[],
-        mantenimiento:[],
-        visitas:[],
-        tecladoencryptor:[],
-        devolucionpartes:[],
-        recategorizacion:[]
+        environment: [],
+        cambiopidpad: [],
+        logistic: [],
+        memoriafiscal: [],
+        mantenimiento: [],
+        visitas: [],
+        tecladoencryptor: [],
+        devolucionpartes: [],
+        recategorizacion: []
     }
 
     array.forEach((form) => {
         let objForm = JSON.parse(form.jsonForm);
         objForm.data = JSON.parse(form.jsonForm);
-        console.log(objForm);
+        let FormParse = {
+            "formid": objForm.id,
+            "txtfecha": objForm.data["date"],
+            "txtcsrcode": objForm.data["csrCode"],
+            "csrcode": objForm.data["csrCode"],
+            "enviado": !!form.enviado,
+            "appversion": objForm.data["appversion"],
+            "author": objForm.data["author"],
+        }
         switch (objForm.FormType) {
             case "1": {
-                formulario.environment.push(
-                    {
-                        "formid": objForm.id,
-                        "txtfecha": objForm.data["date"],
-                        "txtcsrcode": objForm.data["csrCode"],
-                        "txtidatm": objForm.data[""],
-                        "selcliente": objForm.data["13"],
-                        "txtwo": objForm.data["1"],
-                        "txtserie": objForm.data["2"],
+                formulario.environment.push(Object.assign({}, FormParse, {
 
-                        "chkproelectrico": !!Object.keys(objForm.data["7"]).length,
-                        "chkvolnoregulado": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"] ? ),
-                        "txtfn": "",
-                        "txtft": "",
-                        "txtnt": "",
-                        "chknoups": false,
-                        "chknotierrafisica": false,
-                        "chknoenergia": false,
+                    "txtidatm": objForm.data["3"],
+                    "selcliente": objForm.data["13"],
+                    "txtwo": objForm.data["1"],
+                    "txtserie": objForm.data["2"],
 
-                        "chkprosite": false,
-                        "chksuciedad": false,
-                        "chkgoteras": false,
-                        "chkplagas": false,
-                        "chkexpsol": false,
-                        "chkhumedad": false,
-                        "chkmalailuminacion": false,
-                        "chknoaa": false,
-                        "chkprocomms": false,
-                        "selcomunicaciones": objForm.data["9"],
-                        "chkprooperativo": false,
-                        "chksininsumos": false,
-                        "chksinbilletes": false,
-                        "chkmalacalidadbilletes": false,
-                        "chkerroroperador": false,
-                        "chkcargaincpapel": false,
-                        "chkcargainccaseteras": false,
-                        "chksupervisor": false,
-                        "chkerrorbalanceo": false,
-                        "chkprovandalismo": objForm.data["11"],
-                        "chkprootros": objForm.data["12"],
-                        "chkprofotos": false,
-                        "txtcomentario": objForm.data["6"],
-                        "foto1": null,
-                        "foto2": null,
-                        "foto3": null,
-                        "foto4": null,
-                        "txtparte": objForm.data["5"],
-                        "txtcontacto": objForm.data["4"],
-                        "appversion": objForm.data["appversion"],
-                        "author": objForm.data["author"],
-                        "chkmalacalidadinsumos": false,
-                        "cliente": objForm.data["13"],
-                        "csrcode": objForm.data["csrCode"],
-                        "enviado": form.enviado
-                    }
-                )
+                    "chkproelectrico": !!Object.keys(objForm.data["7"]).length,
+                    "chkvolnoregulado": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length,
+                    "txtfn": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["fn"] : "",
+                    "txtft": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["ft"] : "",
+                    "txtnt": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["nt"] : "",
+                    "chknoups": Object.keys(objForm.data["7"]).length ? object.data["7"]["2"] : false,
+                    "chknotierrafisica": Object.keys(objForm.data["7"]).length ? object.data["7"]["3"] : false,
+                    "chknoenergia": Object.keys(objForm.data["7"]).length ? object.data["7"]["4"] : false,
+
+                    "chkprosite": !!Object.keys(objForm.data["8"]).length,
+                    "chksuciedad": Object.keys(objForm.data["8"]).length ? object.data["8"]["1"] : false,
+                    "chkgoteras": Object.keys(objForm.data["8"]).length ? object.data["8"]["2"] : false,
+                    "chkplagas": Object.keys(objForm.data["8"]).length ? object.data["8"]["3"] : false,
+                    "chkexpsol": Object.keys(objForm.data["8"]).length ? object.data["8"]["4"] : false,
+                    "chkhumedad": Object.keys(objForm.data["8"]).length ? object.data["8"]["5"] : false,
+                    "chkmalailuminacion": Object.keys(objForm.data["8"]).length ? object.data["8"]["6"] : false,
+                    "chknoaa": Object.keys(objForm.data["8"]).length ? object.data["8"]["7"] : false,
+
+                    "chkprocomms": !!objForm.data["9"],
+                    "selcomunicaciones": objForm.data["9"],
+
+                    "chkprooperativo": !!Object.keys(objForm.data["10"]).length,
+                    "chksininsumos": Object.keys(objForm.data["10"]).length ? object.data["10"]["1"] : false,
+                    "chksinbilletes": Object.keys(objForm.data["10"]).length ? object.data["10"]["2"] : false,
+                    "chkmalacalidadbilletes": Object.keys(objForm.data["10"]).length ? object.data["10"]["3"] : false,
+                    "chkmalacalidadinsumos": Object.keys(objForm.data["10"]).length ? object.data["10"]["4"] : false,
+                    "chkerroroperador": Object.keys(objForm.data["10"]).length ? object.data["10"]["5"] : false,
+                    "chkcargainccaseteras": Object.keys(objForm.data["10"]).length ? object.data["10"]["6"] : false,
+                    "chkcargaincpapel": Object.keys(objForm.data["10"]).length ? object.data["10"]["7"] : false,
+                    "chkerrorbalanceo": Object.keys(objForm.data["10"]).length ? object.data["10"]["8"] : false,
+                    "chksupervisor": Object.keys(objForm.data["10"]).length ? object.data["10"]["9"] : false,
+
+
+                    "chkprovandalismo": objForm.data["11"],
+                    "chkprootros": objForm.data["12"],
+
+                    "chkprofotos": !!objForm.data["14"].length,
+                    "txtcomentario": objForm.data["6"],
+                    "foto1": objForm.data["14"][0] ? objForm.data["14"][0] : null,
+                    "foto2": objForm.data["14"][1] ? objForm.data["14"][1] : null,
+                    "foto3": objForm.data["14"][2] ? objForm.data["14"][2] : null,
+                    "foto4": objForm.data["14"][3] ? objForm.data["14"][3] : null,
+                    "txtparte": objForm.data["5"],
+                    "txtcontacto": objForm.data["4"],
+                    "cliente": objForm.data["13"]
+                }))
                 break;
             }
             case "2": {
+                formulario.cambiopidpad.push(Object.assign({}, FormParse, {
+                    "workorder":  objForm.data["21"],
+                    "custref":  objForm.data["22"],
+                    "sitename":  objForm.data["23"],
+                    "seriesaliente":  objForm.data["25"],
+                    "serieentrante":  objForm.data["26"],
+                    "nropos": objForm.data["24"],
+                    "foto1": objForm.data["14"][0] ? objForm.data["14"][0] : null,
+                    "foto2": objForm.data["14"][1] ? objForm.data["14"][1] : null,
+                    "foto3": objForm.data["14"][2] ? objForm.data["14"][2] : null,
+                    "foto4": objForm.data["14"][3] ? objForm.data["14"][3] : null,
+                }))
                 break;
             }
             case "3": {

@@ -38,7 +38,7 @@
                 "name": "Equipo",
                 "type": "InputText",
                 "value": "",
-                "columnName": "txtwo",
+                "columnName": "txtidatm",
                 "properties": [
                     {
                         "description": "required",
