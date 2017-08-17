@@ -192,7 +192,7 @@
                     },
                     {
                         "description": "length",
-                        "value": 10
+                        "value": 9
                     }
                 ],
                 "value": "",
@@ -484,8 +484,8 @@
                 "columnName": "txtserial"
             },
             {
-                "name": "InputText",
-                "type": "Equipo",
+                "name": "Equipo",
+                "type": "InputText",
                 "properties": [
                     {
                         "description": "required",
@@ -598,8 +598,8 @@
                 "columnName": "txtserial"
             },
             {
-                "name": "InputText",
-                "type": "Equipo",
+                "name": "Equipo",
+                "type": "InputText",
                 "properties": [
                     {
                         "description": "required",
@@ -673,8 +673,8 @@
                 "columnName": "selcliente"
             },
             {
-                "name": "InputText",
-                "type": "Equipo",
+                "name": "Equipo",
+                "type": "InputText",
                 "properties": [
                     {
                         "description": "required",
@@ -715,17 +715,17 @@
                 ]
             },
             {
-                "name": "Photos",
-                "type": "Photo",
-                "columnName": "foto",
+                "name": "Comentario",
+                "type": "TextArea",
                 "properties": [
                     {
-                        "description": "maxLength",
-                        "value": 4
+                        "description": "required",
+                        "value": true
                     }
                 ],
-                "value": "[]",
-                "id": 76
+                "value": "",
+                "id": 76,
+                "columnName": "comentario"
             }
         ]
     },
@@ -808,6 +808,19 @@
                         "value": true
                     }
                 ]
+            },
+            {
+                "name": "Photos",
+                "type": "Photo",
+                "properties": [
+                    {
+                        "description": "maxLength",
+                        "value": 4
+                    }
+                ],
+                "value": "[]",
+                "id": 87,
+                "columnName": "foto"
             }
         ]
     },
