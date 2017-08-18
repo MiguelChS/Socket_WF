@@ -89,7 +89,7 @@ function formateDataToOld(array) {
 
     array.forEach((form) => {
         let objForm = JSON.parse(form.jsonForm);
-        objForm.data = JSON.parse(form.jsonForm);
+        objForm.data = JSON.parse(objForm.data);
         let FormParse = {
             "formid": objForm.id,
             "txtfecha": objForm.data["date"],
@@ -108,7 +108,7 @@ function formateDataToOld(array) {
                     "txtserie": objForm.data["2"],
 
                     "chkproelectrico": !!Object.keys(objForm.data["7"]).length,
-                    "chkvolnoregulado": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length,
+                    "chkvolnoregulado": !!(Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length),
                     "txtfn": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["fn"] : "",
                     "txtft": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["ft"] : "",
                     "txtnt": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["nt"] : "",
@@ -289,37 +289,85 @@ function formateDataToOld(array) {
                 break;
             }
             case "9": {
-                formulario.recategorizacion.push(Object.assign({},FormParse,{
-                    "workOrder":objForm.data["91"],
-                    "nroEquipo":objForm.data["92"],
-                    "custRefNum":objForm.data["94"],
-                    "comentario":objForm.data["95"],
-                    "falla":objForm.data["96"],
-                    "cliente":objForm.data["93"],
-                    "fechaCreacion":objForm.data["date"]
+                formulario.recategorizacion.push(Object.assign({}, FormParse, {
+                    "workOrder": objForm.data["91"],
+                    "nroEquipo": objForm.data["92"],
+                    "custRefNum": objForm.data["94"],
+                    "comentario": objForm.data["95"],
+                    "falla": objForm.data["96"],
+                    "cliente": objForm.data["93"],
+                    "fechaCreacion": objForm.data["date"]
                 }))
                 break;
             }
         }
     });
+
+    return formulario;
 }
 
-function InitProcessSearchBase() {
-    repoFormulario.GetJsonForm()
-        .then((result) => {
-            let formulario = formateDataToOld(result);
-            formulario = Mapeo(formulario);
 
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-}
 
 module.exports = {
     InitProcess,
     InitProcessSinRequest,
     InitProcessSearchBase
 };
+
+const Test = [{
+    id: "123456789",
+    enviado: false,
+    jsonForm: JSON.stringify(
+        {
+            id: "123456789",
+            FormType: '1',
+            data: JSON.stringify(
+                {
+                    "1": "W123456789",
+                    "2": "serie",
+                    "3": "Equipo",
+                    "4": "Contacto",
+                    "5": "Parte",
+                    "6": "Comentario",
+                    "7": {},
+                    "8": {},
+                    "9": "",
+                    "10": {},
+                    "11": false,
+                    "12": false,
+                    "13": "noUsar",
+                    "14": [],
+                    "date": "2017-02-01 15:00",
+                    "author": "mc185249",
+                    "csrCode": "AR101H90",
+                    "appversion": "1.0"
+                }
+            )
+        }
+    )
+}]
+
+function InitProcessSearchBase() {
+
+    let formulario = formateDataToOld(Test);
+    formulario = Mapeo(formulario);
+    ArmadoMail(formulario)
+        .then(resultFormConMail => {
+            console.log(resultFormConMail)
+        })
+        .catch((err) => {
+           console.log(err)
+        })
+    /*repoFormulario.GetJsonForm()
+        .then((result) => {
+            let formulario = formateDataToOld(Test);
+            //formulario = Mapeo(formulario);
+            console.log(formulario);
+            x = 12;
+        })
+        .catch((err) => {
+            console.log(err);
+        })*/
+}
 
 InitProcessSearchBase();
