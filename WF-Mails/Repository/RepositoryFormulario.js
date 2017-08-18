@@ -195,10 +195,38 @@ function GetJsonForm() {
     })
 }
 
+function deleteFormJson(idForm){
+    let query = `DELETE FORM_JSON WHERE idForm = ${idForm}`;
+    return new Promise((resolve, reject) => {
+        DBSql.SqlQuery({}, query, (data, err) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(data);
+            }
+        });
+    })
+}
+
+function updateJsonForm(idForm){
+    let query = `UPDATE FORM_JSON SET enviado = 1 WHERE idForm = ${idForm}`;
+    return new Promise((resolve, reject) => {
+        DBSql.SqlQuery({}, query, (data, err) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(data);
+            }
+        });
+    })
+}
+
 module.exports = {
     getFormulario,
     insertFormDevolucionParte,
     insertFormulario,
     insertJsonForm,
-    GetJsonForm
+    GetJsonForm,
+    deleteFormJson,
+    updateJsonForm
 }

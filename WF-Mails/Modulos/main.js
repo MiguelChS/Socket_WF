@@ -306,14 +306,6 @@ function formateDataToOld(array) {
     return formulario;
 }
 
-
-
-module.exports = {
-    InitProcess,
-    InitProcessSinRequest,
-    InitProcessSearchBase
-};
-
 const Test = [{
     id: "123456789",
     enviado: false,
@@ -352,8 +344,9 @@ function InitProcessSearchBase() {
     let formulario = formateDataToOld(Test);
     formulario = Mapeo(formulario);
     ArmadoMail(formulario)
-        .then(resultFormConMail => {
-            console.log(resultFormConMail)
+        .then(resultFormConMail => EnvioMails(resultFormConMail))
+        .then((result)=>{
+            console.log(result);
         })
         .catch((err) => {
            console.log(err)
@@ -370,4 +363,8 @@ function InitProcessSearchBase() {
         })*/
 }
 
-InitProcessSearchBase();
+module.exports = {
+    InitProcess,
+    InitProcessSinRequest,
+    InitProcessSearchBase
+};
