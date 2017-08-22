@@ -61,9 +61,10 @@ function enviarMail(form, estado) {
                 estado.err = err.stack;
                 estado.proceso = "ENVIANDO MAIL"
                 reject(estado)
+                return;
             }
-            repoFormulario.updateJsonForm()
-                .then(()=>{
+            repoFormulario.updateJsonForm(form.formid.value)
+                .then(() => {
                     resolve();
                 })
                 .catch(err => {
@@ -119,7 +120,7 @@ function subirInsetarActulizar(form) {
     return new Promise((resolve, reject) => {
         subirFotos(form, estadoProceso)
             .then(() => insertarFormulario(form, estadoProceso))
-            .then(() => deleteFormInsertado(estadoProceso.formid)/*actulizarEstadoPostgres(form, true, true, estadoProceso)*/)
+            .then(() => deleteForm(estadoProceso, form)/*actulizarEstadoPostgres(form, true, true, estadoProceso)*/)
             .then(() => resolve(estadoProceso))
             .catch(err => {
                 resolve(err);
@@ -144,6 +145,19 @@ function soloActulizarPostgres(form) {
     })
 }
 //nueva version eliminamos el formulario que ya se inserto
+function deleteForm(form, estado) {
+    return new Promise((resolve, reject) => {
+        repoFormulario.deleteFormJson(form.formid.value)
+            .then(() => resolve())
+            .catch(err => {
+                estado.err = err.stack;
+                estado.proceso = "ELIMINAR FORM_JSON";
+                reject(estado);
+            })
+    })
+
+}
+
 function deleteFormInsertado(form) {
     let estadoProceso = {
         formid: form.formid.value,
@@ -152,14 +166,13 @@ function deleteFormInsertado(form) {
         proceso: null
     }
     return new Promise((resolve, reject) => {
-        repoFormulario.deleteFormJson(estadoProceso.formid)
+        deleteForm(form, estadoProceso)
             .then(() => resolve(estadoProceso))
             .catch(err => {
-                estado.err = err.stack;
-                estado.proceso = "ELIMINAR FORM_JSON TEST";
-                resolve(estado);
+                resolve(err);
             })
     })
+
 
 }
 //para el caso que normal envio subida y inserte actulizacion
@@ -174,7 +187,7 @@ function enviarSubirInsetarActulizar(form) {
         enviarMail(form, estadoProceso)
             .then(() => subirFotos(form, estadoProceso))
             .then(() => insertarFormulario(form, estadoProceso))
-            .then(() => deleteFormInsertado(form))
+            .then(() => deleteForm(estadoProceso, form))
             .then(() => resolve(estadoProceso))
             .catch(err => {
                 resolve(err);
@@ -189,13 +202,16 @@ function EnvioMails(formularios) {
             //actulizar el estado del mail en postgres
             //arrayPromise.push(soloActulizarPostgres(form))
             //eliminamos el formulario
+            console.log("existe Eliminarme")
             arrayPromise.push(deleteFormInsertado(form));
         } else {
             if (form.enviado.value) {
                 //subimos las fotos y insertamos el formulario en el sqlServer
+                console.log("subit y insertarme eliminar")
                 arrayPromise.push(subirInsetarActulizar(form));
             } else {
                 //enviamos mail subimos fotos y insertamos sql
+                console.log("enviar subir insertar eliminar")
                 arrayPromise.push(enviarSubirInsetarActulizar(form))
             }
         }
