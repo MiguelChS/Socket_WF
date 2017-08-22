@@ -93,12 +93,12 @@ function formateDataToOld(array) {
         let FormParse = {
             "formid": objForm.id,
             "txtfecha": objForm.data["date"],
-            "csrcode": objForm.data["csrCode"],
+            "csrcode": "AR101H90",//objForm.data["csrCode"],
             "enviado": !!form.enviado,
-            "appversion": objForm.data["appversion"],
-            "author": objForm.data["author"],
+            "appversion": "0.1",//objForm.data["appversion"],
+            "author": "mc185249@ncr.com"//objForm.data["author"],
         }
-        switch (objForm.FormType) {
+        switch (objForm.idFormType) {
             case "1": {
                 formulario.environment.push(Object.assign({}, FormParse, {
 
@@ -176,6 +176,7 @@ function formateDataToOld(array) {
                 formulario.logistic.push(Object.assign({}, FormParse, {
                     "txtwo": objForm.data["31"],
                     "txtparte": objForm.data["32"],
+                    "txtcsrcode": "AR101H90",////objForm.data["csrCode"]
                     "txtreparador": objForm.data["35"],
                     "txtretorno": objForm.data["34"],
                     "txtcomentario": objForm.data["36"],
@@ -184,7 +185,6 @@ function formateDataToOld(array) {
                     "foto2": objForm.data["37"][1] ? objForm.data["37"][1] : null,
                     "foto3": objForm.data["37"][2] ? objForm.data["37"][2] : null,
                     "foto4": objForm.data["37"][3] ? objForm.data["37"][3] : null,
-                    "cliente": null
                 }))
                 break;
             }
@@ -306,61 +306,30 @@ function formateDataToOld(array) {
     return formulario;
 }
 
-const Test = [{
-    id: "123456789",
-    enviado: false,
-    jsonForm: JSON.stringify(
-        {
-            id: "123456789",
-            FormType: '1',
-            data: JSON.stringify(
-                {
-                    "1": "W123456789",
-                    "2": "serie",
-                    "3": "Equipo",
-                    "4": "Contacto",
-                    "5": "Parte",
-                    "6": "Comentario",
-                    "7": {},
-                    "8": {},
-                    "9": "",
-                    "10": {},
-                    "11": false,
-                    "12": false,
-                    "13": "noUsar",
-                    "14": [],
-                    "date": "2017-02-01 15:00",
-                    "author": "mc185249",
-                    "csrCode": "AR101H90",
-                    "appversion": "1.0"
-                }
-            )
-        }
-    )
-}]
-
 function InitProcessSearchBase() {
-
-    let formulario = formateDataToOld(Test);
-    formulario = Mapeo(formulario);
-    ArmadoMail(formulario)
-        .then(resultFormConMail => EnvioMails(resultFormConMail))
-        .then((result)=>{
-            console.log(result);
-        })
-        .catch((err) => {
-           console.log(err)
-        })
-    /*repoFormulario.GetJsonForm()
+    repoFormulario.GetJsonForm()
         .then((result) => {
-            let formulario = formateDataToOld(Test);
-            //formulario = Mapeo(formulario);
-            console.log(formulario);
-            x = 12;
+            let formulario = formateDataToOld(result);
+            formulario = Mapeo(formulario);
+            ArmadoMail(formulario)
+                .then(resultFormConMail => EnvioMails(resultFormConMail))
+                .then((result) => {
+                    let Errores = result.filter(x => x.err)
+                    if (Errores.length) {
+                        EnvioError(JSON.stringify(Errores))
+                    }
+                })
+                .catch((err) => {
+                    if (err.hasOwnProperty('stack')) {
+                        EnvioError(err.stack)
+                    } else {
+                        EnvioError(JSON.stringify(err))
+                    }
+                })
         })
         .catch((err) => {
-            console.log(err);
-        })*/
+            EnvioError(err.message)
+        })
 }
 
 module.exports = {

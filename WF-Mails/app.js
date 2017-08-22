@@ -4,4 +4,4 @@
 
 var mail = require("./Modulos/main");
 //mail.InitProcess();
-mail.InitProcessSearchBase()
+mail.InitProcessSearchBase();

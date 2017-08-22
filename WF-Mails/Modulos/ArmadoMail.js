@@ -276,7 +276,7 @@ function bodyMail(formulario) {
                             from: form.author.value,
                             html: html(form),
                             subject: result.find(sub => sub.formid == form.formid.value).subject,
-                            to: `${form.Contactos.getConcatenado()},${form.author.value}`,
+                            to: "mc185249@ncr.com,jn185090@ncr.com,gm230032@ncr.com",//`${form.Contactos.getConcatenado()},${form.author.value}`,
                             attachments: agruparFotosFormulario(form)
                         }
                     }
