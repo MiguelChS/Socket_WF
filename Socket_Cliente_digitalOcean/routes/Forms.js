@@ -26,7 +26,10 @@ router.post("/", (req, res) => {
         socket.emit('sendForms', datos);
     });
     socket.on('retornosendForms', (data) => {
-        if (data.detail == true) {
+        console.log("respuesta----------------------------------")
+        console.log(data)
+        console.log("FIN respuesta----------------------------------")
+        if (data.err) {
             res.status(200).send();
         } else {
             res.status(500).send();
