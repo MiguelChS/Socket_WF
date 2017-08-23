@@ -11,7 +11,11 @@ router.get("/:userid/:pais", (req, res) => {
         socket.emit('ClienteGet', datos);
     });
     socket.on('retornoClienteGet', (data) => {
-        res.json(data.detail);
+        if(data.detail){
+            res.status(200).json(data.detail);
+        }else{
+            res.status(500).send();
+        }
     });
 })
 
