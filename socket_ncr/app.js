@@ -31,7 +31,7 @@ ioClient.on('sendForms', function (data) {
 });
 
 ioClient.on('ClienteGet', function (data) {
-    request('http://lnxsrv02:3015/api/cliente', function (error, response, body) {
+    request(`http://lnxsrv02:3015/api/cliente/${data.pais}`, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             ioClient.emit('retornoClienteGet', { userid: data.userid, detail: JSON.parse(body) });
         } else {

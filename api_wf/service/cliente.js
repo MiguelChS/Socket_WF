@@ -8,12 +8,12 @@ const config = {
 
 
 module.exports = {
-    getCliente: () => {
+    getCliente: (pais) => {
         return new Promise((resolve, reject) => {
             sql.connect(config).then(pool => {
-                    return pool.request()
-                        .query('select Nombres from Clientes')
-                })
+                return pool.request()
+                    .query(`select Nombres from Clientes where Pais = ${pais}`)
+            })
                 .then((result) => {
                     sql.close();
                     resolve(result.recordset);
