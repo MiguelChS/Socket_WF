@@ -1,7 +1,7 @@
 let http = require("http");
 var option = {
     hostname: "ncrapps.com",
-    path: "/apiwf2/forms/AR/mc185249_251",
+    path: "apiwf2/cliente/mc185249_251/AR",
     method: "GET",
     port: ""
 };

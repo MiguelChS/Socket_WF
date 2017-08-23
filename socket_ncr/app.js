@@ -36,7 +36,7 @@ ioClient.on('ClienteGet', function (data) {
             ioClient.emit('retornoClienteGet', { userid: data.userid, detail: JSON.parse(body) });
         } else {
             console.log('error');
-            ioClient.emit('retornoClienteGet', { userid: data.userid, detail: 'Error Get Cliente' });
+            ioClient.emit('retornoClienteGet', { userid: data.userid, detail: false});
         }
     });
 });
