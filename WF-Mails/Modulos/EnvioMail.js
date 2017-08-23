@@ -120,7 +120,7 @@ function subirInsetarActulizar(form) {
     return new Promise((resolve, reject) => {
         subirFotos(form, estadoProceso)
             .then(() => insertarFormulario(form, estadoProceso))
-            .then(() => deleteForm(estadoProceso, form)/*actulizarEstadoPostgres(form, true, true, estadoProceso)*/)
+            .then(() => deleteForm(form, estadoProceso)/*actulizarEstadoPostgres(form, true, true, estadoProceso)*/)
             .then(() => resolve(estadoProceso))
             .catch(err => {
                 resolve(err);
@@ -187,7 +187,7 @@ function enviarSubirInsetarActulizar(form) {
         enviarMail(form, estadoProceso)
             .then(() => subirFotos(form, estadoProceso))
             .then(() => insertarFormulario(form, estadoProceso))
-            .then(() => deleteForm(estadoProceso, form))
+            .then(() => deleteForm(form, estadoProceso))
             .then(() => resolve(estadoProceso))
             .catch(err => {
                 resolve(err);

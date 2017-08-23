@@ -18,12 +18,13 @@ app.use((req, res, next) => {
 
 app.post("/Forms", (req, res) => {
     repoForm.insertJsonForm(req.body.id, JSON.stringify(req.body))
+        res.status(500).send()/*
         .then((result) => {
             res.status(200).send();
         })
         .catch((err) => {
             res.status(500).send(err.message);
-        })
+        })*/
 })
 
 app.get("/Forms/:pais", (req, res) => {
@@ -42,12 +43,12 @@ app.get("/Forms/:pais", (req, res) => {
             }
         case "CO":
             {   
-                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6)
+                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6 || x.id == 9)
                 break;
             }
         case "CL":
             {
-                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6 || x.id == 9) 
+                formularios = jsonData.filter(x => x.id == 3 || x.id == 1 || x.id == 6) 
                 break;
             }
     }

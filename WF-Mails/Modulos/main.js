@@ -93,10 +93,10 @@ function formateDataToOld(array) {
         let FormParse = {
             "formid": objForm.id,
             "txtfecha": objForm.data["date"],
-            "csrcode": "AR101H90",//objForm.data["csrCode"],
+            "csrcode": objForm.data["csrCode"],
             "enviado": !!form.enviado,
             "appversion": "0.1",//objForm.data["appversion"],
-            "author": "mc185249@ncr.com"//objForm.data["author"],
+            "author": `${objForm.data["qlookid"]}@ncr.com`,
         }
         switch (objForm.idFormType) {
             case "1": {
@@ -112,32 +112,32 @@ function formateDataToOld(array) {
                     "txtfn": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["fn"] : "",
                     "txtft": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["ft"] : "",
                     "txtnt": Object.keys(objForm.data["7"]).length && Object.keys(objForm.data["7"]["1"]).length ? objForm.data["7"]["1"]["nt"] : "",
-                    "chknoups": Object.keys(objForm.data["7"]).length ? object.data["7"]["2"] : false,
-                    "chknotierrafisica": Object.keys(objForm.data["7"]).length ? object.data["7"]["3"] : false,
-                    "chknoenergia": Object.keys(objForm.data["7"]).length ? object.data["7"]["4"] : false,
-
+                    "chknoups": Object.keys(objForm.data["7"]).length ? objForm.data["7"]["2"] : false,
+                    "chknotierrafisica": Object.keys(objForm.data["7"]).length ? objForm.data["7"]["3"] : false,
+                    "chknoenergia": Object.keys(objForm.data["7"]).length ? objForm.data["7"]["4"] : false,
+                    
                     "chkprosite": !!Object.keys(objForm.data["8"]).length,
-                    "chksuciedad": Object.keys(objForm.data["8"]).length ? object.data["8"]["1"] : false,
-                    "chkgoteras": Object.keys(objForm.data["8"]).length ? object.data["8"]["2"] : false,
-                    "chkplagas": Object.keys(objForm.data["8"]).length ? object.data["8"]["3"] : false,
-                    "chkexpsol": Object.keys(objForm.data["8"]).length ? object.data["8"]["4"] : false,
-                    "chkhumedad": Object.keys(objForm.data["8"]).length ? object.data["8"]["5"] : false,
-                    "chkmalailuminacion": Object.keys(objForm.data["8"]).length ? object.data["8"]["6"] : false,
-                    "chknoaa": Object.keys(objForm.data["8"]).length ? object.data["8"]["7"] : false,
+                    "chksuciedad": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["1"] : false,
+                    "chkgoteras": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["2"] : false,
+                    "chkplagas": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["3"] : false,
+                    "chkexpsol": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["4"] : false,
+                    "chkhumedad": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["5"] : false,
+                    "chkmalailuminacion": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["6"] : false,
+                    "chknoaa": Object.keys(objForm.data["8"]).length ? objForm.data["8"]["7"] : false,
 
                     "chkprocomms": !!objForm.data["9"],
                     "selcomunicaciones": objForm.data["9"],
 
                     "chkprooperativo": !!Object.keys(objForm.data["10"]).length,
-                    "chksininsumos": Object.keys(objForm.data["10"]).length ? object.data["10"]["1"] : false,
-                    "chksinbilletes": Object.keys(objForm.data["10"]).length ? object.data["10"]["2"] : false,
-                    "chkmalacalidadbilletes": Object.keys(objForm.data["10"]).length ? object.data["10"]["3"] : false,
-                    "chkmalacalidadinsumos": Object.keys(objForm.data["10"]).length ? object.data["10"]["4"] : false,
-                    "chkerroroperador": Object.keys(objForm.data["10"]).length ? object.data["10"]["5"] : false,
-                    "chkcargainccaseteras": Object.keys(objForm.data["10"]).length ? object.data["10"]["6"] : false,
-                    "chkcargaincpapel": Object.keys(objForm.data["10"]).length ? object.data["10"]["7"] : false,
-                    "chkerrorbalanceo": Object.keys(objForm.data["10"]).length ? object.data["10"]["8"] : false,
-                    "chksupervisor": Object.keys(objForm.data["10"]).length ? object.data["10"]["9"] : false,
+                    "chksininsumos": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["1"] : false,
+                    "chksinbilletes": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["2"] : false,
+                    "chkmalacalidadbilletes": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["3"] : false,
+                    "chkmalacalidadinsumos": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["4"] : false,
+                    "chkerroroperador": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["5"] : false,
+                    "chkcargainccaseteras": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["6"] : false,
+                    "chkcargaincpapel": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["7"] : false,
+                    "chkerrorbalanceo": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["8"] : false,
+                    "chksupervisor": Object.keys(objForm.data["10"]).length ? objForm.data["10"]["9"] : false,
 
 
                     "chkprovandalismo": objForm.data["11"],
@@ -316,10 +316,12 @@ function InitProcessSearchBase() {
                 .then((result) => {
                     let Errores = result.filter(x => x.err)
                     if (Errores.length) {
+                        console.log(Errores);
                         EnvioError(JSON.stringify(Errores))
                     }
                 })
                 .catch((err) => {
+                    console.log(err);
                     if (err.hasOwnProperty('stack')) {
                         EnvioError(err.stack)
                     } else {
@@ -328,6 +330,7 @@ function InitProcessSearchBase() {
                 })
         })
         .catch((err) => {
+            console.log(err)
             EnvioError(err.message)
         })
 }
