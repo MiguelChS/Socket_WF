@@ -18,13 +18,12 @@ app.use((req, res, next) => {
 
 app.post("/Forms", (req, res) => {
     repoForm.insertJsonForm(req.body.id, JSON.stringify(req.body))
-        res.status(500).send()/*
         .then((result) => {
             res.status(200).send();
         })
         .catch((err) => {
             res.status(500).send(err.message);
-        })*/
+        })
 })
 
 app.get("/Forms/:pais", (req, res) => {
