@@ -17,6 +17,11 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", api(express.Router()));
+app.listen(3015, () => {
+    console.log(`api Cliente add Listen 3015`);
+});
+
+/*
 
 process.on('SIGINT', () => {
     mongoose.connections.forEach((value) => {
@@ -29,12 +34,10 @@ connect()
     .on('error', () => {})
     .on('disconnected', connect)
     .once('open', () => {
-        app.listen(3015, () => {
-            console.log(`api Cliente add Listen 3015`);
-        });
+        
     });
 
 function connect() {
     var options = { server: { socketOptions: { keepAlive: 1 } } };
     return mongoose.connect(`mongodb://mongodb/Formularios`, options).connection;
-}
+}*/
