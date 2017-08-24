@@ -7,10 +7,8 @@ var
 
 // Event fired every time a new client connects:
 ioServer.on('connection', function(socket) {
-    console.log('Socket Connected ID=' + socket.id)
         //CHANGE USER ID
     socket.on('setUserId', function(uId) {
-        console.log("aca")
         customsID[uId] = socket.id
     });
 

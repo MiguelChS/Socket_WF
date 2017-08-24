@@ -6,7 +6,6 @@ module.exports = (Router) => {
             let result = await serviceCliente.getCliente(req.params.pais);
             res.status(200).json(result.map(x => x.Nombres));
         } catch (e) {
-            console.log(e);
             res.status(500).send()
         }
     })

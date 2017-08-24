@@ -35,7 +35,6 @@ ioClient.on('ClienteGet', function (data) {
         if (!error && response.statusCode == 200) {
             ioClient.emit('retornoClienteGet', { userid: data.userid, detail: JSON.parse(body) });
         } else {
-            console.log('error');
             ioClient.emit('retornoClienteGet', { userid: data.userid, detail: false});
         }
     });
@@ -47,7 +46,6 @@ ioClient.on('pedidoWO', function (data) {
         if (!error && response.statusCode == 200) {
             ioClient.emit('retornoWO', { userid: data.userid, detail: JSON.parse(body) });
         } else {
-            console.log('error');
             ioClient.emit('retornoWO', { userid: data.userid, detail: 'Error General getwo' });
         }
     });
@@ -60,7 +58,6 @@ ioClient.on('pedidoLogin', function (data) {
         if (!error && response.statusCode == 200) {
             ioClient.emit('retornoLogin', { userid: data.userid, detail: JSON.parse(body) });
         } else {
-            console.log('error');
             ioClient.emit('retornoLogin', { userid: data.userid, detail: 'Error General login' });
         }
     });
@@ -72,7 +69,6 @@ ioClient.on('pedidoWObyCsr', function (data) {
         if (!error && response.statusCode == 200) {
             ioClient.emit('retornoWObyCsr', { userid: data.userid, detail: JSON.parse(body) });
         } else {
-            console.log('error');
             ioClient.emit('retornoWObyCsr', { userid: data.userid, detail: 'Error General pedidoWObyCsr' });
         }
     });
@@ -84,12 +80,9 @@ ioClient.on('envioForm', function (data) {
             if (!error && response.statusCode == 200) {
                         ioClient.emit('retornoWObyCsr', {userid: data.userid, detail: JSON.parse(body)});
                     } else {
-                        console.log ('error');
                         ioClient.emit('retornoWObyCsr', {userid: data.userid, detail: 'Error General pedidoWObyCsr'});
             }
     });*/
-
-    console.log(data)
 
     ioClient.emit('retornoForm', { userid: data.userid, detail: "Data Posted Successfully" });
 });

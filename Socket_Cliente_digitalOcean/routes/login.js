@@ -6,7 +6,6 @@ var io = require('socket.io-client');
 
 router.post('/', function(req, res, next) {
   var url = 'http://ncrapps.com:8080';
-  //var url = 'http://localhost:8080';
 
   var socket = io.connect(url);
 
@@ -20,7 +19,6 @@ router.post('/', function(req, res, next) {
       });
 
       socket.on('retornoLogin', function(data) {
-        //console.log('pasoooooo');
             res.json(data);
       });
 
