@@ -9,6 +9,7 @@ const config = {
 
 module.exports = {
     getCliente: (pais) => {
+        console.log(`select Nombres from Clientes where Pais = ${pais}`)
         return new Promise((resolve, reject) => {
             sql.connect(config).then(pool => {
                 return pool.request()
