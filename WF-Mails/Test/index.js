@@ -1,11 +1,31 @@
-let axios = require("axios");
+function miguel(x){
+    return new Promise((resolve)=>{
+        resolve(x)
+    })
+}
 
-axios.get("http://ncrapps.com/apiwf/api/cliente/AR")
-    .then((result) => {
-        console.log(result)
-        z = 10
+function otra(l){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(l)
+        },3000)
     })
-    .catch((err) => {
-        console.log(err)
-        x = 12
+}
+
+async function miguel2(){
+    let m = await miguel('Chauca Miguel xD');
+    console.log(m);
+    return otra('Sanchez xD');
+}
+
+
+
+miguel('Miguel xD')
+    .then((res)=>{
+        console.log(res)
+        return miguel2();
     })
+    .then((res2)=>{
+        console.log(res2)
+    })
+    .catch(err => console.log(err));

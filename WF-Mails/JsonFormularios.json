@@ -2,6 +2,8 @@
     {
         "id": 1,
         "name": "Environment",
+        "iniciales":"EN",
+        "color":"#3498db",
         "inputs": [
             {
                 "id": 1,
@@ -180,6 +182,8 @@
     {
         "id": 2,
         "name": "Cambio Pin Pad",
+        "iniciales":"CP",
+        "color":"#9b59b6",
         "inputs": [
             {
                 "name": "WorkOrder",
@@ -269,6 +273,8 @@
     {
         "id": 3,
         "name": "Logistic",
+        "iniciales":"LG",
+        "color":"#e74c3c",
         "inputs": [
             {
                 "name": "WorkOrder",
@@ -349,6 +355,8 @@
     {
         "id": 4,
         "name": "Memoria Fiscal",
+        "iniciales":"MF",
+        "color":"#2c3e50",
         "inputs": [
             {
                 "name": "WorkOrder",
@@ -452,6 +460,8 @@
     {
         "id": 5,
         "name": "Mantenimiento",
+        "iniciales":"MA",
+        "color":"#f39c12",
         "inputs": [
             {
                 "name": "WorkOrder",
@@ -553,6 +563,8 @@
     {
         "id": 6,
         "name": "Visita Tecnica",
+        "iniciales":"VT",
+        "color":"#7f8c8d",
         "inputs": [
             {
                 "name": "WorkOrder",
@@ -641,6 +653,8 @@
     {
         "id": 7,
         "name": "Teclado Encryptor",
+        "iniciales":"TE",
+        "color":"#8e44ad",
         "inputs": [
             {
                 "name": "WorkOrder",
@@ -732,6 +746,8 @@
     {
         "id": 8,
         "name": "Devolucion de partes",
+        "iniciales":"DP",
+        "color":"#16a085",
         "inputs": [
             {
                 "id": 81,
@@ -827,6 +843,8 @@
     {
         "id": 9,
         "name": "Recategorizacion",
+        "iniciales":"RE",
+        "color":"#d35400",
         "inputs": [
             {
                 "id": 91,
