@@ -267,13 +267,6 @@
                 "value": "[]",
                 "id": 27,
                 "columnName": "foto"
-            },
-            {
-                "name": "Firma",
-                "type": "FirmaElectronica",
-                "value": "",
-                "id": 28,
-                "columnName": "firma"
             }
         ]
     },
