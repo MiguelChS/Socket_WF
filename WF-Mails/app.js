@@ -4,4 +4,15 @@
 
 var mail = require("./Modulos/main");
 //mail.InitProcess();
-mail.InitProcessSearchBase();
+function InicialScheduler(){
+    mail.InitProcessSearchBase()
+        .then(()=>{
+            setTimeout(()=>{
+                InicialScheduler();
+            },60000)
+        })    
+}
+
+
+
+module.exports = InicialScheduler;

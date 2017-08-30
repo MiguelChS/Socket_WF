@@ -3,6 +3,7 @@ var app = express();
 let bodyParser = require("body-parser");
 var mail = require("./Modulos/main");
 let repoForm = require("./Repository/RepositoryFormulario");
+let scheduler = require("./app");
 let fs = require("fs");
 
 app.use(bodyParser.json({ limit: "50mb" }));
@@ -59,3 +60,5 @@ app.get("/Forms/:pais", (req, res) => {
 app.listen(3434, () => {
     console.log(`I listen in port 3434`)
 });
+console.log('iniciando Scheduler envio de mail');
+scheduler();

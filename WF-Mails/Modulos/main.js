@@ -307,7 +307,8 @@ function formateDataToOld(array) {
 }
 
 function InitProcessSearchBase() {
-    repoFormulario.GetJsonForm()
+    return new Promise((resolve,reject)=>{
+        repoFormulario.GetJsonForm()
         .then((result) => {
             let formulario = formateDataToOld(result);
             formulario = Mapeo(formulario);
@@ -316,23 +317,24 @@ function InitProcessSearchBase() {
                 .then((result) => {
                     let Errores = result.filter(x => x.err)
                     if (Errores.length) {
-                        console.log(Errores);
                         EnvioError(JSON.stringify(Errores))
                     }
+                    resolve();
                 })
                 .catch((err) => {
-                    console.log(err);
                     if (err.hasOwnProperty('stack')) {
                         EnvioError(err.stack)
                     } else {
                         EnvioError(JSON.stringify(err))
                     }
+                    resolve();
                 })
         })
         .catch((err) => {
-            console.log(err)
             EnvioError(err.message)
-        })
+            resolve()
+        })  
+    })
 }
 
 module.exports = {
