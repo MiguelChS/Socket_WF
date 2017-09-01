@@ -10,9 +10,7 @@ function InicialScheduler(){
             setTimeout(()=>{
                 InicialScheduler();
             },60000)
-        })    
+        })   
 }
-
-
 
 module.exports = InicialScheduler;

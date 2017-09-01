@@ -61,4 +61,4 @@ app.listen(3434, () => {
     console.log(`I listen in port 3434`)
 });
 console.log('iniciando Scheduler envio de mail');
-//scheduler();
+scheduler();

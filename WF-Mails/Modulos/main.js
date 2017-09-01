@@ -317,6 +317,7 @@ function InitProcessSearchBase() {
                 .then((result) => {
                     let Errores = result.filter(x => x.err)
                     if (Errores.length) {
+                        console.log(Errores);
                         EnvioError(JSON.stringify(Errores))
                     }
                     resolve();

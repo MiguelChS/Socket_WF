@@ -202,16 +202,16 @@ function EnvioMails(formularios) {
             //actulizar el estado del mail en postgres
             //arrayPromise.push(soloActulizarPostgres(form))
             //eliminamos el formulario
-            console.log("existe Eliminarme")
+            console.log("existe Eliminarme -->" + form.formid.value + "--" + form.tablaName.value)
             arrayPromise.push(deleteFormInsertado(form));
         } else {
             if (form.enviado.value) {
                 //subimos las fotos y insertamos el formulario en el sqlServer
-                console.log("subit y insertarme eliminar")
+                console.log("subit y insertarme eliminar -->" + form.formid.value + "--" + form.tablaName.value)
                 arrayPromise.push(subirInsetarActulizar(form));
             } else {
                 //enviamos mail subimos fotos y insertamos sql
-                console.log("enviar subir insertar eliminar")
+                console.log("enviar subir insertar eliminar -->" + form.formid.value + "--" + form.tablaName.value)
                 arrayPromise.push(enviarSubirInsetarActulizar(form))
             }
         }
