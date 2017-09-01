@@ -1,9 +1,10 @@
 let express = require("express");
 let app = express();
 let bodyParser = require("body-parser");
-let mongoose = require("mongoose");
+//let mongoose = require("mongoose");
 let api = require('./api')
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
+process.setMaxListeners(0);
 
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
