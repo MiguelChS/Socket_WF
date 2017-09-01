@@ -104,7 +104,7 @@ function formateDataToOld(array) {
 
                     "txtidatm": objForm.data["3"],
                     "selcliente": objForm.data["13"],
-                    "txtwo": objForm.data["1"],
+                    "txtwo": `w${objForm.data["1"]}`,
                     "txtserie": objForm.data["2"],
 
                     "chkproelectrico": !!Object.keys(objForm.data["7"]).length,
@@ -159,7 +159,7 @@ function formateDataToOld(array) {
             }
             case "2": {
                 formulario.cambiopidpad.push(Object.assign({}, FormParse, {
-                    "workorder": objForm.data["21"],
+                    "workorder": `w${objForm.data["21"]}`,
                     "custref": objForm.data["22"],
                     "sitename": objForm.data["23"],
                     "seriesaliente": objForm.data["25"],
@@ -174,7 +174,7 @@ function formateDataToOld(array) {
             }
             case "3": {
                 formulario.logistic.push(Object.assign({}, FormParse, {
-                    "txtwo": objForm.data["31"],
+                    "txtwo": `w${objForm.data["31"]}`,
                     "txtparte": objForm.data["32"],
                     "txtcsrcode": "AR101H90",////objForm.data["csrCode"]
                     "txtreparador": objForm.data["35"],
@@ -190,7 +190,7 @@ function formateDataToOld(array) {
             }
             case "4": {
                 formulario.memoriafiscal.push(Object.assign({}, FormParse, {
-                    "workorder": objForm.data["41"],
+                    "workorder": `w${objForm.data["41"]}`,
                     "serie": objForm.data["42"],
                     "idequipo": null,
                     "cliente": objForm.data["43"],
@@ -208,7 +208,7 @@ function formateDataToOld(array) {
             }
             case "5": {
                 formulario.mantenimiento.push(Object.assign({}, FormParse, {
-                    "txtwo": objForm.data["51"],
+                    "txtwo": `w${objForm.data["51"]}`,
                     "txtequipo": objForm.data["53"],
                     "txtserial": objForm.data["52"],
                     "txtfechamp": objForm.data["55"],
@@ -226,7 +226,7 @@ function formateDataToOld(array) {
             }
             case "6": {
                 formulario.visitas.push(Object.assign({}, FormParse, {
-                    "txtwo": objForm.data["61"],
+                    "txtwo": `w${objForm.data["61"]}`,
                     "txtequipo": objForm.data["64"],
                     "txtserial": objForm.data["63"],
                     "txtfechavi": objForm.data["65"],
@@ -243,7 +243,7 @@ function formateDataToOld(array) {
             }
             case "7": {
                 formulario.tecladoencryptor.push(Object.assign({}, FormParse, {
-                    "workorder": objForm.data["71"],
+                    "workorder": `w${objForm.data["71"]}`,
                     "serie": objForm.data["74"],
                     "motivodanio": objForm.data["75"],
                     "comentario": objForm.data["76"],
@@ -282,7 +282,7 @@ function formateDataToOld(array) {
                             "descripcion": x.descripcion,
                             "cantidad": x.cantidad,
                             "estado": x.estado,
-                            "workorder": x.workOrde
+                            "workorder": x.workOrde ? `w${x.workOrde}` : ""
                         }
                     })
                 }))
@@ -290,7 +290,7 @@ function formateDataToOld(array) {
             }
             case "9": {
                 formulario.recategorizacion.push(Object.assign({}, FormParse, {
-                    "workOrder": objForm.data["91"],
+                    "workOrder": `w${objForm.data["91"]}`,
                     "nroEquipo": objForm.data["92"],
                     "custRefNum": objForm.data["94"],
                     "comentario": objForm.data["95"],
