@@ -95,7 +95,7 @@ function formateDataToOld(array) {
             "txtfecha": objForm.data["date"],
             "csrcode": objForm.data["csrCode"],
             "enviado": !!form.enviado,
-            "appversion": "0.1",//objForm.data["appversion"],
+            "appversion": objForm.data["appVersion"],
             "author": `${objForm.data["qlookid"]}@ncr.com`,
         }
         switch (objForm.idFormType) {
