@@ -311,7 +311,6 @@ function InitProcessSearchBase() {
         repoFormulario.GetJsonForm()
         .then((result) => {
             let formulario = formateDataToOld(result);
-            formulario.environment = [formulario.environment[1]];
             formulario = Mapeo(formulario);
             ArmadoMail(formulario)
                 .then(resultFormConMail => EnvioMails(resultFormConMail))
