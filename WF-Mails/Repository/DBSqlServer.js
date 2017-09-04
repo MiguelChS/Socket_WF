@@ -23,7 +23,12 @@ function DBSqlServer(){
                 callback(null,err);
                 return;
             }
-            buildParametro(req,hashParametro);
+            try{
+                buildParametro(req,hashParametro);
+            }
+            catch(e){
+                //console.log(e)
+            }
             req.query(query, function (err, data) {
                 if(err){
                     callback(null,err);
